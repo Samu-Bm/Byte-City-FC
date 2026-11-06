@@ -2,7 +2,7 @@
 
 > Proyecto de **Lenguajes de Marcas** · Ciclo Superior DAW · Byte City FC
 
-**Estado a 6 de noviembre de 2026:** existe una página HTML inicial (`html/index.html`), la documentación de planificación y varios recursos gráficos en `img/`. Las fases de maquetación completa, estilos y validación siguen pendientes. Consulta el [README](../README.md) para el inventario actual.
+**Estado a 6 de noviembre de 2026:** está implementada la portada en `html/index.html`, con navegación, presentación, próximo partido, historia y estadio. También hay recursos gráficos en `img/`. Las demás páginas, los estilos y la validación siguen pendientes. Consulta el [README](../README.md) para el inventario actual.
 
 Se plantea el proyecto como el desarrollo de un producto web profesional para un cliente: el club ficticio **Byte City**.
 
@@ -13,10 +13,10 @@ Se plantea el proyecto como el desarrollo de un producto web profesional para un
 | Fase | Contenido | Entregable |
 |---|---|---|
 | 1. Planificación | Sitemap, mockups, guía de estilo | Documentación creada; mockups pendientes |
-| 2. HTML5 | Maquetación semántica de las páginas previstas | Solo existe `html/index.html`, aún básico |
+| 2. HTML5 | Maquetación semántica de las páginas previstas | Portada implementada; páginas interiores pendientes |
 | 3. CSS3 | Estilos base → layout (Flexbox/Grid) → responsive (Mobile First) | Pendiente; no hay carpeta CSS |
 | 4. Validación | W3C HTML y CSS, revisión de accesibilidad | Pendiente; no hay evidencias |
-| 5. Entrega | Repositorio en GitHub con README | README actualizado; desarrollo pendiente |
+| 5. Entrega | Repositorio en GitHub con README | Repositorio actualizado; desarrollo pendiente |
 
 > 📱 **Responsive:** se aplicará en la fase 3 con estrategia Mobile First y `@media queries`. Queda pendiente de desarrollo.
 
@@ -27,11 +27,11 @@ Se plantea el proyecto como el desarrollo de un producto web profesional para un
 - [x] Sitemap previsto
 - [ ] Mockups móvil y escritorio (`docs/mockups/`)
 - [x] Guía de estilo documentada
-- [ ] Páginas HTML semánticas de acuerdo con el alcance previsto
+- [ ] Completar las páginas HTML semánticas de acuerdo con el alcance previsto
 - [ ] CSS organizado y diseño responsive
 - [ ] Validación W3C y revisión de accesibilidad
 - [x] `README.md` actualizado al estado real
-- [ ] Comprobar publicación y configuración final del repositorio
+- [x] Publicar la estructura actual del proyecto en GitHub
 
 ---
 

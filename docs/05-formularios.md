@@ -1,6 +1,6 @@
 # 📝 Formularios
 
-Se proponen **cuatro formularios** para futuras páginas. Ninguno está implementado en la página HTML actual. Las siguientes tablas son especificaciones, no una descripción de formularios funcionales.
+Se proponen **cuatro formularios** para futuras páginas. Ninguno está implementado: la portada actual no contiene formularios y las páginas previstas para alojarlos aún no existen. Las siguientes tablas son especificaciones, no una descripción de formularios funcionales.
 
 Cuando se implementen, todos deberán cumplir estas reglas:
 

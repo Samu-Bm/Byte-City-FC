@@ -1,12 +1,96 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Byte City FC</title>
+    <link rel="icon" href="/img/escudo/Escudo-Sin-Fondo.png">
 </head>
 <body>
-    <img src="/img/escudo/Escudo-Sin-Fondo.png" alt="">
-    <h1>BYTE CITY FC</h1>
+
+    <header id="menuNavegacion">
+        <a href="index.html" class="logo">
+            <img width="70" src="/img/escudo/Escudo-Sin-Fondo.png" alt="Logo Byte City FC">
+            <span>Byte City FC</span>
+        </a>
+
+        <nav aria-label="Menú principal">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li>
+                    <a href="club.html">Club</a>
+                    <ul>
+                        <li><a href="club.html#historia">Historia</a></li>
+                        <li><a href="club.html#estadio">Estadio</a></li>
+                        <li><a href="club.html#aficion">Afición</a></li>
+                    </ul>
+                </li>
+                <li><a href="equipo.html">Equipo</a></li>
+                <li><a href="partidos.html">Partidos</a></li>
+                <li><a href="clasificacion.html">Clasificación</a></li>
+                <li><a href="nuestra-piel.html">Nuestra piel</a></li>
+                <li><a href="actualidad.html">Actualidad</a></li>
+                <li><a href="hazte-socio.html">Hazte socio</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="seccionPrincipal">
+            <img src="/img/escudo/Escudo-Sin-Fondo.png" alt="Escudo de Byte City FC">
+            <h1 id="tituloPrincipal">BYTE CITY FC</h1>
+            <p id="subtituloLema">Play - code..</p>
+            <a id="botonVerPartidos" href="partidos.html">Ver Partidos ⭢</a>
+            <a id="botonConoceAlEquipo" href="equipo.html">Conoce al Equipo</a>
+        </section>
+
+        <section id="seccionProximoPartido">
+            <h2>Próximo partido</h2>
+            <article>
+                <p>Liga Digital · Jornada 8</p>
+                <div>
+                    <img src="/img/escudo/Escudo-Sin-Fondo.png" alt="Escudo de Byte City FC">
+                    <h3>Byte City FC</h3>
+                </div>
+                <p>VS</p>
+                <p><time datetime="21:00">21:00</time></p>
+                <div>
+                    <img src="/img/codeunitedfc/Escudo CODE UNITED FC con temática tecnológica.png" alt="Escudo de Code United FC">
+                    <h3>Code United FC</h3>
+                </div>
+            </article>
+        </section>
+
+        <section id="seccionQuienesSomos">
+            <h2>Quiénes somos</h2>
+
+            <article id="historia">
+                <h3>Nuestra historia</h3>
+                <p>Byte City es un proyecto de fútbol nacido en las aulas del ciclo de Desarrollo de Aplicaciones Web (DAW). Lo fundó un grupo de compañeros que decidieron llevar su pasión por el fútbol a un terreno de juego propio. Lo que empezó como una idea compartida durante el curso se convirtió en un club con identidad, escudo y afición. En su primera temporada, el equipo se proclamó campeón de su categoría y sigue creciendo.</p>
+                <p>El nombre Byte City FC hace referencia a la unión entre el mundo digital y el fútbol, simbolizando la innovación, la creatividad y el trabajo en equipo. Representa un club moderno que combina la tecnología con la pasión por el deporte, destacando por su espíritu competitivo, su unión y su afán de superación.</p>
+            </article>
+
+            <article id="estadio">
+                <h3>Nuestro estadio</h3>
+                <p>Jugamos como locales en el Estadio Bit Arena, en Ciudad Byte. Compartimos instalaciones con el histórico CD Compilador, fundado en 1968.</p>
+
+                <aside>
+                    <h4>Ubicación</h4>
+                    <address>
+                        Calle del Algoritmo, 12<br>
+                        01100 Ciudad Byte
+                    </address>
+                </aside>
+            </article>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Byte City FC · Club ficticio creado con fines educativos</p>
+        <p><a href="legal.html">Aviso legal</a> · <a href="contacto.html">Contacto</a></p>
+    </footer>
+
 </body>
 </html>

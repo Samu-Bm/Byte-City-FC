@@ -8,14 +8,14 @@ Referencia visual propuesta: **Rōnin FC** — [roninfc.digital](https://roninfc
 
 | Elemento de Rōnin FC | Cómo se adapta a Byte City | Página / archivo |
 |---|---|---|
-| Hero con escudo grande, lema de dos líneas y dos botones | Escudo, «Fútbol con código en las venas» y botones a Partidos y Equipo | `index.html` |
-| Tarjeta de próximo partido con escudos, «VS», hora y estadio | `<aside>` con la misma estructura, sin cuenta atrás | `index.html` |
-| «Quiénes somos» con Historia, Estadio y Equipo | Bloque resumen en Inicio que enlaza a `club.html` | `index.html` · `club.html` |
+| Hero con escudo grande, lema y dos botones | Portada implementada con escudo, lema «Play - code..» y enlaces a Partidos y Equipo | `html/index.html` |
+| Tarjeta de próximo partido con escudos, «VS», hora y estadio | Implementada parcialmente con competición, jornada, escudos, equipos y hora; fecha, estadio y detalle pendientes | `html/index.html` |
+| «Quiénes somos» con Historia, Estadio y Equipo | Implementado parcialmente con artículos de Historia y Estadio; bloque Equipo y página `club.html` pendientes | `html/index.html` |
 | Tres tarjetas de datos (entrenador, competición, temporada) | Tarjetas pequeñas con datos rápidos del club | `index.html` |
-| Menú corto con «Club» desplegable | «Club» desplegable (Historia, Estadio, Afición) hecho con CSS | Todas las páginas |
-| Pie con navegación, redes, texto legal y créditos | Igual, más el formulario de boletín | Todas las páginas |
-| Aviso legal como página aparte | `legal.html` sencilla | `legal.html` |
-| Fondo negro, estética minimalista y detalle en japonés | Paleta propia negro y verde lima, con un detalle propio (binario o la palabra «byte») | `css/base.css` |
+| Menú corto con «Club» desplegable | Enlaces de navegación y submenú definidos en HTML; el comportamiento visual desplegable requiere CSS | `html/index.html` |
+| Pie con navegación, redes, texto legal y créditos | Pie implementado con enlaces a Aviso legal y Contacto; redes y boletín pendientes | `html/index.html` |
+| Aviso legal como página aparte | Enlace presente; la página aún no está creada | `legal.html` (pendiente) |
+| Fondo negro, estética minimalista y detalle en japonés | Paleta negro y verde lima propuesta; aún no hay CSS que la aplique | `css/base.css` (pendiente) |
 
 ## Qué no se copia
 

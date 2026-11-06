@@ -1,6 +1,18 @@
 # 📄 Páginas y contenidos
 
-Propuesta de contenido para las **14 páginas previstas** del sitio. Actualmente solo está creado `html/index.html`, una página inicial con el título y el escudo; las páginas listadas a continuación aún no existen como implementación.
+Propuesta de contenido para las **14 páginas previstas** del sitio. La portada `html/index.html` ya está implementada parcialmente. Las otras 13 páginas todavía no existen.
+
+## Estado de la portada implementada
+
+La página existente incluye:
+
+- Cabecera con escudo, nombre del club y menú de navegación.
+- Portada con escudo, lema «Play - code..» y enlaces a Partidos y Equipo.
+- Próximo partido de Liga Digital entre Byte City FC y Code United FC, con hora y escudos.
+- Sección «Quiénes somos» con historia y estadio; la ubicación se presenta en un `<aside>`.
+- Pie de página con aviso legal y contacto.
+
+El calendario, la fecha y el estadio del próximo encuentro no aparecen todavía en la página. Los enlaces a páginas interiores apuntan a destinos aún no implementados.
 
 | # | Página | Archivo |
 |:-:|---|---|
@@ -29,14 +41,16 @@ Propuesta de contenido para las **14 páginas previstas** del sitio. Actualmente
 
 ---
 
-## 🏠 Inicio — `index.html`
+## 🏠 Inicio — `html/index.html`
+
+La tabla siguiente recoge el alcance previsto para la portada; los bloques que aún no se mencionan en el apartado «Estado de la portada implementada» siguen pendientes.
 
 | Bloque | Etiqueta | Contenido |
 |---|---|---|
-| Banner | `<section>` | Escudo grande, eslogan *«Fútbol con código en las venas»* y dos botones: **Ver partidos** y **Conoce al equipo** |
-| Quiénes somos | `<section>` | Resumen en tres bloques (**Historia**, **Estadio**, **Equipo**) con enlace a `club.html` |
+| Banner | `<section>` | Implementado con escudo, lema *«Play - code..»* y enlaces **Ver Partidos** y **Conoce al Equipo** |
+| Quiénes somos | `<section>` | Implementado con artículos de historia y estadio; la ubicación se agrupa en un `<aside>` |
 | Datos rápidos | `<section>` con 3 `<article>` | Tarjetas: entrenador, competición y temporada |
-| Próximo partido | `<aside>` | Tarjeta con competición, escudos de ambos equipos a los lados con «VS» en medio, fecha, hora, estadio y enlace al detalle (sin cuenta atrás) |
+| Próximo partido | `<section>` y `<article>` | Implementado con competición, jornada, equipos, escudos y hora; fecha, estadio y enlace al detalle pendientes |
 | Último resultado | `<aside>` | Marcador, rival y enlace a la crónica |
 | Últimas noticias | `<section>` con 3 `<article>` | Imagen, título, fecha y enlace |
 | Jugadores destacados | `<section>` con 3 `<article>` | Foto, nombre, dorsal, posición |
@@ -44,7 +58,7 @@ Propuesta de contenido para las **14 páginas previstas** del sitio. Actualmente
 | Mini clasificación | `<section>` | Tabla con los 5 primeros puestos |
 | Llamada a socios | `<section>` | Texto breve + botón a `hazte-socio.html` |
 
-**Encabezados:** `h1` Byte City → `h2` Próximo partido / Quiénes somos / Últimas noticias / Jugadores destacados / Clasificación → `h3` Historia / Estadio / Equipo y el título de cada tarjeta.
+**Encabezados implementados:** `h1` BYTE CITY FC → `h2` Próximo partido / Quiénes somos → `h3` Nuestra historia / Nuestro estadio → `h4` Ubicación. Los demás encabezados indicados en la propuesta siguen pendientes.
 
 ---
 

@@ -34,13 +34,14 @@
 | Carpeta | Contenido disponible | Estado |
 |---|---|---|
 | `img/escudo/` | `Escudo.svg` y `Escudo-Sin-Fondo.png` | Disponible |
+| `img/codeunitedfc/` | Escudo de Code United FC, rival mostrado en el próximo partido | Disponible |
 | `img/equipaciones/Primera equipacion/` | Tres imágenes de la primera equipación | Disponible |
 | `img/equipaciones/Segunda equipacion/` | Tres imágenes de la segunda equipación | Disponible |
 | `img/equipaciones/Tercera equipacion/` | Tres imágenes de la tercera equipación | Disponible |
 | `img/ropa/` | Balón, bufanda, gorra, sudadera, chándal y ropa de entrenamiento | Disponible |
 | `img/logo/`, `img/jugadores/`, `img/estadio/`, `img/noticias/`, `img/aficion/` | Sin imágenes todavía; se conservan con `.gitkeep` | Pendiente |
 
-Las futuras imágenes deberán tener procedencia adecuada y texto `alt` descriptivo cuando aporten información. Los nombres de archivo y las subcarpetas de equipaciones contienen espacios y deben referenciarse respetando exactamente su ruta.
+La portada usa los dos escudos para identificar a los equipos del próximo partido. Las futuras imágenes deberán tener procedencia adecuada y texto `alt` descriptivo cuando aporten información. Los nombres de archivo y las subcarpetas de equipaciones contienen espacios y deben referenciarse respetando exactamente su ruta.
 
 ---
 

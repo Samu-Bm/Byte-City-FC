@@ -4,7 +4,7 @@
 
 ### *Fútbol con código en las venas.*
 
-Proyecto educativo de un club de fútbol ficticio. Este repositorio contiene la planificación del sitio, una página HTML inicial y los recursos gráficos disponibles.
+Proyecto educativo de un club de fútbol ficticio. El sitio ya cuenta con una portada HTML semántica y recursos gráficos; el resto de páginas y los estilos siguen en desarrollo.
 
 </div>
 
@@ -12,14 +12,15 @@ Proyecto educativo de un club de fútbol ficticio. Este repositorio contiene la 
 
 ## Estado actual
 
-La implementación está en una fase inicial:
+La implementación está en desarrollo:
 
-- La única página existente es [`html/index.html`](html/index.html). Muestra el escudo y el nombre del club.
-- Los recursos gráficos disponibles están en [`img/`](img/), principalmente el escudo y las tres equipaciones.
+- La única página implementada es [`html/index.html`](html/index.html). Incluye encabezado y navegación, portada con lema y enlaces, próximo partido, historia, información del estadio y pie de página.
+- La navegación ya apunta a las páginas previstas, pero esas páginas todavía no existen; por tanto, esos enlaces aún no conducen a contenido implementado.
+- Los recursos gráficos disponibles están en [`img/`](img/): escudo de Byte City FC, escudo de Code United FC, tres equipaciones y artículos de ropa.
 - La planificación y las propuestas de diseño están en [`docs/`](docs/).
-- Todavía no existen las otras páginas descritas en la planificación, hojas CSS, formularios funcionales ni comportamiento JavaScript.
+- Todavía no existen hojas CSS, formularios funcionales ni comportamiento JavaScript. La portada no enlaza ninguna hoja de estilos.
 
-Las páginas y funcionalidades detalladas en la documentación son objetivos de diseño, no características implementadas.
+Las páginas y funcionalidades detalladas en la documentación que no aparecen en la portada son objetivos de diseño, no características implementadas.
 
 ## Estructura del proyecto
 
@@ -41,6 +42,7 @@ Las páginas y funcionalidades detalladas en la documentación son objetivos de 
 │   └── index.html
 └── img/
     ├── aficion/
+    ├── codeunitedfc/
     ├── equipaciones/
     ├── estadio/
     ├── jugadores/
@@ -71,10 +73,10 @@ La guía propone verde lima (`#B6FF00`), negro (`#080F0E`), gris oscuro (`#252B2
 
 ## Próximos pasos
 
-1. Completar la planificación y los mockups.
-2. Desarrollar las páginas HTML previstas y enlazarlas.
-3. Crear los estilos y adaptar el sitio a móvil y escritorio.
-4. Revisar accesibilidad, enlaces y validación HTML/CSS; guardar evidencias en `docs/validacion/`.
+1. Implementar las páginas previstas y comprobar los enlaces del menú.
+2. Crear los estilos y adaptar el sitio a móvil y escritorio.
+3. Revisar accesibilidad, enlaces y validación HTML/CSS; guardar evidencias en `docs/validacion/`.
+4. Completar los mockups en `docs/mockups/`.
 
 ---
 

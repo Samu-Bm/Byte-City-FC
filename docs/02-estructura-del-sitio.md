@@ -1,6 +1,6 @@
 # 🗺️ Estructura del sitio
 
-> El sitemap y las páginas de esta guía describen el **alcance previsto**; no representan páginas ya implementadas. Actualmente solo existe `html/index.html`. La estructura real de carpetas se muestra más abajo.
+> El sitemap describe el **alcance previsto**. Actualmente solo está implementada `html/index.html`; las demás páginas enlazadas son todavía pendientes. La estructura real de carpetas se muestra más abajo.
 
 ## Mapa del sitio (Site Map)
 
@@ -58,6 +58,7 @@ byte-city-fc/
 │   └── index.html
 └── img/
     ├── aficion/
+    ├── codeunitedfc/
     ├── equipaciones/
     ├── escudo/
     ├── estadio/
@@ -67,7 +68,7 @@ byte-city-fc/
     └── ropa/
 ```
 
-Los directorios de recursos sin imágenes conservan un archivo `.gitkeep`. Aún no hay una carpeta `css/` ni páginas HTML adicionales.
+`img/codeunitedfc/` contiene el escudo del rival mostrado en el próximo partido. Los directorios de recursos sin imágenes conservan un archivo `.gitkeep`. Aún no hay una carpeta `css/` ni páginas HTML adicionales.
 
 ## Estructura prevista
 

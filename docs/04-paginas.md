@@ -33,7 +33,7 @@ El calendario, la fecha y el estadio del próximo encuentro no aparecen todavía
 
 ---
 
-> **Estructura común a todas las páginas**
+> **Estructura común prevista para las páginas**
 > - `<header>` con el logo y `<nav>` con el menú principal (con **Club** como submenú desplegable y **Hazte socio** como botón destacado).
 > - `<main>` con el contenido único de la página.
 > - `<footer>` con: contacto, enlaces de interés, redes sociales ficticias, datos del club, enlace al [aviso legal](#️-aviso-legal--legalhtml) y **formulario de boletín** (email + casilla de consentimiento + botón).

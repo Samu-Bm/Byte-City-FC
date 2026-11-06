@@ -38,7 +38,7 @@
 | `noticias/` | Una imagen principal por noticia | JPG / WebP |
 | `aficion/` | Gradas, peñas, eventos | JPG / WebP |
 
-Se pueden usar imágenes de bancos libres (Unsplash, Pexels) o generadas con IA, **siempre con atributo `alt` descriptivo**.
+Se pueden usar imágenes de bancos libres (Unsplash, Pexels) o generadas con IA,
 
 ---
 

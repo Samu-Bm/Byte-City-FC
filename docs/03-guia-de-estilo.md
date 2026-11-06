@@ -1,5 +1,7 @@
 # 🎨 Guía de estilo
 
+> La paleta y las tipografías de este documento son la identidad visual **propuesta**. Aún no se han aplicado en CSS. La lista de recursos gráficos refleja el contenido disponible actualmente.
+
 ## Paleta oficial
 
 | Muestra | Color | HEX | Uso |
@@ -29,16 +31,16 @@
 
 ## Banco de imágenes
 
-| Carpeta | Contenido | Formato recomendado |
+| Carpeta | Contenido disponible | Estado |
 |---|---|---|
-| `logo/` | Escudo (versión color y monocroma) | SVG / PNG |
-| `jugadores/` | Una foto por jugador, mismo encuadre | JPG / WebP |
-| `equipaciones/` | Cada equipación: frontal, trasera y detalle | JPG / WebP |
-| `estadio/` | Exterior, interior, vista aérea | JPG / WebP |
-| `noticias/` | Una imagen principal por noticia | JPG / WebP |
-| `aficion/` | Gradas, peñas, eventos | JPG / WebP |
+| `img/escudo/` | `Escudo.svg` y `Escudo-Sin-Fondo.png` | Disponible |
+| `img/equipaciones/Primera equipacion/` | Tres imágenes de la primera equipación | Disponible |
+| `img/equipaciones/Segunda equipacion/` | Tres imágenes de la segunda equipación | Disponible |
+| `img/equipaciones/Tercera equipacion/` | Tres imágenes de la tercera equipación | Disponible |
+| `img/ropa/` | Balón, bufanda, gorra, sudadera, chándal y ropa de entrenamiento | Disponible |
+| `img/logo/`, `img/jugadores/`, `img/estadio/`, `img/noticias/`, `img/aficion/` | Sin imágenes todavía; se conservan con `.gitkeep` | Pendiente |
 
-Se pueden usar imágenes de bancos libres (Unsplash, Pexels) o generadas con IA,
+Las futuras imágenes deberán tener procedencia adecuada y texto `alt` descriptivo cuando aporten información. Los nombres de archivo y las subcarpetas de equipaciones contienen espacios y deben referenciarse respetando exactamente su ruta.
 
 ---
 

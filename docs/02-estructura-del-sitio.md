@@ -1,5 +1,7 @@
 # 🗺️ Estructura del sitio
 
+> El sitemap y las páginas de esta guía describen el **alcance previsto**; no representan páginas ya implementadas. Actualmente solo existe `html/index.html`. La estructura real de carpetas se muestra más abajo.
+
 ## Mapa del sitio (Site Map)
 
 ```mermaid
@@ -12,6 +14,11 @@ flowchart TD
     A --> G[📰 actualidad.html<br>Actualidad]
     A --> H[🎟️ hazte-socio.html<br>Hazte socio]
     A --> I[✉️ contacto.html<br>Contacto]
+    A --> J[⚖️ legal.html<br>Aviso legal]
+
+    B --> B1[#historia]
+    B --> B2[#estadio]
+    B --> B3[#aficion]
 
     C --> C1[jugador.html<br>Ficha de jugador]
     D --> D1[partido.html<br>Detalle de partido]
@@ -21,25 +28,53 @@ flowchart TD
 
 ## Menú principal
 
-| Posición | Enlace | Archivo |
-|---|---|---|
-| 1 | Inicio | `index.html` |
-| 2 | Club | `club.html` |
-| 3 | Equipo | `equipo.html` |
-| 4 | Partidos | `partidos.html` |
-| 5 | Clasificación | `clasificacion.html` |
-| 6 | Nuestra piel | `nuestra-piel.html` |
-| 7 | Actualidad | `actualidad.html` |
-| 8 | **Hazte socio** (botón destacado en verde lima) | `hazte-socio.html` |
+| Posición | Enlace | Tipo | Destino |
+|:-:|---|---|---|
+| 1 | Inicio | Enlace | `index.html` |
+| 2 | Club | **Desplegable** | `club.html` → Historia, Estadio, Afición (anclas) |
+| 3 | Equipo | Enlace | `equipo.html` |
+| 4 | Partidos | Enlace | `partidos.html` |
+| 5 | Clasificación | Enlace | `clasificacion.html` |
+| 6 | Nuestra piel | Enlace | `nuestra-piel.html` |
+| 7 | Actualidad | Enlace | `actualidad.html` |
+| 8 | **Hazte socio** | Botón destacado en verde lima | `hazte-socio.html` |
 
-`Contacto` se enlaza desde el **pie de página** de todas las páginas.
+El desplegable de «Club» se puede hacer solo con CSS (`:hover` y `:focus-within`), sin JavaScript.
+
+`Contacto` y `Aviso legal` se enlazan desde el **pie de página** de todas las páginas.
 
 ---
 
-## Árbol de carpetas
+## Estructura actual de carpetas
+
+```text
+byte-city-fc/
+├── README.md
+├── docs/
+│   ├── 01-planificacion.md ... 08-referencias-de-diseno.md
+│   ├── mockups/
+│   └── validacion/
+├── html/
+│   └── index.html
+└── img/
+    ├── aficion/
+    ├── equipaciones/
+    ├── escudo/
+    ├── estadio/
+    ├── jugadores/
+    ├── logo/
+    ├── noticias/
+    └── ropa/
+```
+
+Los directorios de recursos sin imágenes conservan un archivo `.gitkeep`. Aún no hay una carpeta `css/` ni páginas HTML adicionales.
+
+## Estructura prevista
+
+La siguiente estructura es una propuesta para las siguientes fases. Las páginas y hojas CSS enumeradas aún no están creadas.
 
 ```
-byte-city/
+byte-city-fc/
 ├── index.html
 ├── club.html
 ├── equipo.html
@@ -53,6 +88,7 @@ byte-city/
 ├── hazte-socio.html
 ├── gracias.html
 ├── contacto.html
+├── legal.html
 ├── css/
 │   ├── reset.css
 │   ├── base.css          ← colores, tipografías

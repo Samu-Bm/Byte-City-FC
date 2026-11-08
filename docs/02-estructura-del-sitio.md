@@ -6,15 +6,14 @@
 
 ```mermaid
 flowchart TD
-    A[🏠 index.html<br>Inicio] --> B[🛡️ club.html<br>Club]
-    A --> C[👥 equipo.html<br>Equipo]
-    A --> D[📅 partidos.html<br>Partidos]
-    A --> E[🏆 clasificacion.html<br>Clasificación]
-    A --> F[👕 nuestra-piel.html<br>Nuestra piel]
-    A --> G[📰 actualidad.html<br>Actualidad]
-    A --> H[🎟️ hazte-socio.html<br>Hazte socio]
-    A --> I[✉️ contacto.html<br>Contacto]
-    A --> J[⚖️ legal.html<br>Aviso legal]
+    A[🏠 index.html<br>Inicio] --> B[🛡️ pages/club.html<br>Club]
+    A --> C[👥 pages/equipo.html<br>Equipo]
+    A --> D[📅 pages/partidos.html<br>Partidos]
+    A --> E[👕 pages/nuestra-piel.html<br>Nuestra piel]
+    A --> F[📰 pages/actualidad.html<br>Actualidad]
+    A --> G[🎟️ pages/hazte-socio.html<br>Hazte socio y Abonos]
+    A --> H[✉️ pages/contacto.html<br>Contacto]
+    A --> I[⚖️ pages/legal.html<br>Aviso legal]
 
     B --> B1[#historia]
     B --> B2[#estadio]
@@ -22,8 +21,8 @@ flowchart TD
 
     C --> C1[jugador.html<br>Ficha de jugador]
     D --> D1[partido.html<br>Detalle de partido]
-    G --> G1[noticia.html<br>Noticia completa]
-    H --> H1[gracias.html<br>Confirmación]
+    F --> F1[noticia.html<br>Noticia completa]
+    G --> G1[gracias.html<br>Confirmación]
 ```
 
 ## Menú principal
@@ -31,15 +30,14 @@ flowchart TD
 | Posición | Enlace | Tipo | Destino |
 |:-:|---|---|---|
 | 1 | Inicio | Enlace | `index.html` |
-| 2 | Club | **Desplegable** | `club.html` → Historia, Estadio, Afición (anclas) |
-| 3 | Equipo | Enlace | `equipo.html` |
-| 4 | Partidos | Enlace | `partidos.html` |
-| 5 | Clasificación | Enlace | `clasificacion.html` |
-| 6 | Nuestra piel | Enlace | `nuestra-piel.html` |
-| 7 | Actualidad | Enlace | `actualidad.html` |
-| 8 | **Hazte socio** | Botón destacado en verde lima | `hazte-socio.html` |
+| 2 | Club | **Desplegable** | `pages/club.html` → Historia, Estadio, Afición (anclas) |
+| 3 | Equipo | Enlace | `pages/equipo.html` |
+| 4 | Partidos | Enlace | `pages/partidos.html` |
+| 5 | Nuestra piel | Enlace | `pages/nuestra-piel.html` |
+| 6 | Actualidad | Enlace | `pages/actualidad.html` |
+| 7 | **Hazte socio** | Botón destacado en verde lima | `pages/hazte-socio.html` |
 
-El desplegable de «Club» se puede hacer solo con CSS (`:hover` y `:focus-within`), sin JavaScript.
+El desplegable de «Club» se implementa con CSS puro (`:hover` y `:focus-within`), sin JavaScript.
 
 `Contacto` y `Aviso legal` se enlazan desde el **pie de página** de todas las páginas.
 
@@ -50,12 +48,22 @@ El desplegable de «Club» se puede hacer solo con CSS (`:hover` y `:focus-withi
 ```text
 byte-city-fc/
 ├── README.md
+├── index.html                 <-- Portada en la raíz del proyecto
+├── css/
+│   └── base.css               <-- Paleta, tipografías y reset
+├── pages/                     <-- Páginas interiores
+│   ├── club.html
+│   ├── equipo.html
+│   ├── partidos.html
+│   ├── nuestra-piel.html
+│   ├── actualidad.html
+│   ├── hazte-socio.html
+│   ├── contacto.html
+│   └── legal.html
 ├── docs/
 │   ├── 01-planificacion.md ... 08-referencias-de-diseno.md
 │   ├── mockups/
 │   └── validacion/
-├── html/
-│   └── index.html
 └── img/
     ├── aficion/
     ├── codeunitedfc/

@@ -1,0 +1,1207 @@
+/* ==========================================================================
+   BYTE CITY FC — HOJA DE ESTILOS BASE (CSS3 PURO)
+   Identidad visual: Dark Mode deportivo, minimalista y de alto contraste
+   ========================================================================== */
+
+/* 1. TIPOGRAFÍAS OFICIALES */
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap');
+
+/* 2. VARIABLES DE DISEÑO (DESIGN TOKENS) */
+:root {
+  /* Paleta oficial */
+  --color-primary: #B6FF00;       /* Verde lima neón (acento, botones, badges) */
+  --color-primary-hover: #9ee000; /* Lima hover */
+  --color-bg-dark: #080F0E;       /* Fondo oscuro principal */
+  --color-surface: #141B1A;       /* Fondo de tarjetas y bloques */
+  --color-surface-hover: #1E2726; /* Hover en tarjetas */
+  --color-border: #252B2A;        /* Líneas divisorias y bordes sutiles */
+  --color-text: #F5F7F5;          /* Texto principal (blanco roto) */
+  --color-text-muted: #8E9998;    /* Texto secundario / descripciones */
+
+  /* Tipografías */
+  --font-display: 'Barlow Condensed', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  /* Espaciado */
+  --container-max-width: 1200px;
+  --header-height: 80px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+
+  /* Sombras y brillos */
+  --glow-primary: 0 0 20px rgba(182, 255, 0, 0.25);
+  --shadow-card: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+/* 3. RESET Y BASE */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  background-color: var(--color-bg-dark);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+ul {
+  list-style: none;
+}
+
+/* 4. CABECERA Y NAVEGACIÓN GLOBAL */
+#menuNavegacion {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: rgba(8, 15, 14, 0.92);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--color-border);
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+}
+
+#menuNavegacion .logo {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: var(--color-text);
+  text-transform: uppercase;
+}
+
+#menuNavegacion .logo:hover {
+  color: var(--color-primary);
+}
+
+#menuNavegacion nav > ul {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+#menuNavegacion nav a {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  padding: 0.5rem 0.25rem;
+  position: relative;
+}
+
+#menuNavegacion nav a:hover {
+  color: var(--color-text);
+}
+
+/* Enlace destacado de Hazte socio */
+#menuNavegacion nav li:last-child a {
+  background-color: var(--color-primary);
+  color: var(--color-bg-dark);
+  padding: 0.5rem 1.25rem;
+  border-radius: var(--radius-sm);
+  font-weight: 800;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+#menuNavegacion nav li:last-child a:hover {
+  background-color: var(--color-primary-hover);
+  box-shadow: var(--glow-primary);
+  transform: translateY(-1px);
+}
+
+/* Submenú desplegable (Club) con CSS puro */
+#menuNavegacion nav li {
+  position: relative;
+}
+
+#menuNavegacion nav li ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  min-width: 160px;
+  padding: 0.5rem 0;
+  box-shadow: var(--shadow-card);
+}
+
+#menuNavegacion nav li:hover ul,
+#menuNavegacion nav li:focus-within ul {
+  display: block;
+}
+
+#menuNavegacion nav li ul li a {
+  display: block;
+  padding: 0.5rem 1rem;
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+}
+
+#menuNavegacion nav li ul li a:hover {
+  background-color: var(--color-surface-hover);
+  color: var(--color-primary);
+}
+
+/* 5. CONTENIDO PRINCIPAL */
+main {
+  flex: 1;
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+  width: 100%;
+}
+
+/* 6. HERO SECTION (PORTADA) */
+#seccionPrincipal {
+  text-align: center;
+  padding: 5rem 1rem 6rem;
+  border-bottom: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+#seccionPrincipal img {
+  width: 140px;
+  height: auto;
+  margin-bottom: 1.5rem;
+  filter: drop-shadow(0 0 25px rgba(182, 255, 0, 0.2));
+  transition: transform 0.3s ease;
+}
+
+#seccionPrincipal img:hover {
+  transform: scale(1.05);
+}
+
+#tituloPrincipal {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 7vw, 5.5rem);
+  font-weight: 800;
+  letter-spacing: 2px;
+  line-height: 1;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+
+#subtituloLema {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 4px;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  margin-bottom: 2.5rem;
+}
+
+/* Botones de acción del Hero */
+#botonVerPartidos,
+#botonConoceAlEquipo {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 0.85rem 2rem;
+  border-radius: var(--radius-sm);
+  display: inline-block;
+  margin: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+#botonVerPartidos {
+  background-color: var(--color-primary);
+  color: var(--color-bg-dark);
+}
+
+#botonVerPartidos:hover {
+  background-color: var(--color-primary-hover);
+  box-shadow: var(--glow-primary);
+  transform: translateY(-2px);
+}
+
+#botonConoceAlEquipo {
+  background-color: transparent;
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+}
+
+#botonConoceAlEquipo:hover {
+  border-color: var(--color-text);
+  background-color: var(--color-surface);
+  transform: translateY(-2px);
+}
+
+/* 7. TARJETA DE PRÓXIMO PARTIDO */
+#seccionProximoPartido {
+  padding: 5rem 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+#seccionProximoPartido h2 {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+#seccionProximoPartido article {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 2.5rem 2rem;
+  max-width: 780px;
+  margin: 0 auto;
+  box-shadow: var(--shadow-card);
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  grid-template-rows: auto auto;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+#seccionProximoPartido article > p:first-child {
+  grid-column: 1 / -1;
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: var(--color-primary);
+  text-transform: uppercase;
+}
+
+#seccionProximoPartido article div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+#seccionProximoPartido article div img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+#seccionProximoPartido article div h3 {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* 8. SECCIÓN QUIÉNES SOMOS / EL CLUB */
+#seccionQuienesSomos {
+  padding: 5rem 0;
+}
+
+#seccionQuienesSomos h2 {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+#seccionQuienesSomos article {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+#seccionQuienesSomos article h3 {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+#seccionQuienesSomos article p {
+  color: var(--color-text-muted);
+  margin-bottom: 1rem;
+  line-height: 1.7;
+}
+
+#seccionQuienesSomos aside {
+  margin-top: 1.5rem;
+  padding: 1.25rem;
+  background-color: var(--color-bg-dark);
+  border-left: 3px solid var(--color-primary);
+  border-radius: var(--radius-sm);
+}
+
+#seccionQuienesSomos aside h4 {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+#seccionQuienesSomos address {
+  font-style: normal;
+  color: var(--color-text-muted);
+}
+
+/* 9. PIE DE PÁGINA (FOOTER) */
+footer {
+  background-color: var(--color-bg-dark);
+  border-top: 1px solid var(--color-border);
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+
+footer p {
+  margin-bottom: 0.5rem;
+}
+
+footer a {
+  color: var(--color-text-muted);
+}
+
+footer a:hover {
+  color: var(--color-primary);
+}
+
+/* 10. ESTILOS DE PÁGINAS INTERIORES */
+.paginaEncabezado {
+  text-align: center;
+  padding: 3rem 1rem 4rem;
+  border-bottom: 1px solid var(--color-border);
+  margin-bottom: 3.5rem;
+}
+
+.paginaEncabezado h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 1rem;
+}
+
+.paginaEncabezado .subtitulo,
+.descripcionSeccion {
+  color: var(--color-text-muted);
+  max-width: 680px;
+  margin: 0 auto;
+  font-size: 1.05rem;
+}
+
+/* 11. TABLA COMPARATIVA DE ABONOS (REQUISITO EVALUABLE) */
+.seccionTablaAbonos {
+  margin-bottom: 5rem;
+}
+
+.seccionTablaAbonos h2,
+.seccionFormulario h2 {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.seccionTablaAbonos .descripcionSeccion,
+.seccionFormulario .descripcionSeccion {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.tablaContenedor {
+  overflow-x: auto;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-card);
+}
+
+.tablaComparativa {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  background-color: var(--color-surface);
+}
+
+.tablaComparativa caption {
+  padding: 1rem;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  text-align: right;
+  font-style: italic;
+  background-color: var(--color-bg-dark);
+}
+
+.tablaComparativa thead {
+  background-color: #0c1413;
+  border-bottom: 2px solid var(--color-border);
+}
+
+.tablaComparativa th,
+.tablaComparativa td {
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.tablaComparativa thead th {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--color-primary);
+}
+
+.tablaComparativa tbody th {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--color-text);
+  white-space: nowrap;
+}
+
+.tablaComparativa tbody tr:hover {
+  background-color: var(--color-surface-hover);
+}
+
+.tablaComparativa .precioDestacado {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--color-primary);
+}
+
+.tablaComparativa tfoot td {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  background-color: #0d1615;
+  padding: 1rem 1.5rem;
+}
+
+/* 12. FORMULARIO DE ALTA DE SOCIO */
+.seccionFormulario {
+  max-width: 820px;
+  margin: 0 auto 4rem;
+}
+
+.formularioSocio {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 2.5rem;
+  box-shadow: var(--shadow-card);
+}
+
+.formularioSocio fieldset {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 1.75rem;
+  margin-bottom: 2rem;
+  background-color: rgba(8, 15, 14, 0.4);
+}
+
+.formularioSocio legend {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--color-primary);
+  padding: 0 0.75rem;
+}
+
+.campoFila {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.campoControl {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.campoControl label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.campoControl input,
+.campoControl select,
+.campoControl textarea {
+  background-color: var(--color-bg-dark);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  color: var(--color-text);
+  padding: 0.75rem 1rem;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.campoControl input:focus,
+.campoControl select:focus,
+.campoControl textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 10px rgba(182, 255, 0, 0.2);
+}
+
+.campoControl small {
+  color: var(--color-text-muted);
+  font-size: 0.8rem;
+}
+
+/* Opciones de Abono en Radio Cards */
+.ayudaCampo {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+.opcionesRadio {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.opcionRadioTarjeta {
+  background-color: var(--color-bg-dark);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.opcionRadioTarjeta:hover {
+  border-color: var(--color-primary);
+  background-color: #0d1615;
+}
+
+.opcionRadioTarjeta input[type="radio"] {
+  accent-color: var(--color-primary);
+  width: 18px;
+  height: 18px;
+}
+
+.opcionRadioTarjeta .infoRadio {
+  display: flex;
+  flex-direction: column;
+}
+
+.opcionRadioTarjeta .infoRadio strong {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  color: var(--color-text);
+}
+
+.opcionRadioTarjeta .infoRadio .detalle {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.campoCheckbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.campoCheckbox input[type="checkbox"] {
+  accent-color: var(--color-primary);
+  width: 18px;
+  height: 18px;
+  margin-top: 3px;
+}
+
+.campoCheckbox label {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  line-height: 1.4;
+}
+
+.campoCheckbox label a {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+.accionesFormulario {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-top: 2rem;
+}
+
+.botonEnvio {
+  background-color: var(--color-primary);
+  color: var(--color-bg-dark);
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 0.85rem 2rem;
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.botonEnvio:hover {
+  background-color: var(--color-primary-hover);
+  box-shadow: var(--glow-primary);
+  transform: translateY(-2px);
+}
+
+.botonReset {
+  background-color: transparent;
+  color: var(--color-text-muted);
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 0.85rem 1.5rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.botonReset:hover {
+  color: var(--color-text);
+  border-color: var(--color-text);
+}
+
+/* 13. ESTILOS DE NUESTRA PIEL (EQUIPACIONES Y TIENDA) */
+.seccionColeccion {
+  margin-bottom: 5.5rem;
+}
+
+.tituloSeccion {
+  font-family: var(--font-display);
+  font-size: 2.3rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.gridEquipaciones {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+
+.tarjetaEquipacion {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 2rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-card);
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjetaEquipacion:hover {
+  transform: translateY(-5px);
+  border-color: var(--color-primary);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6), var(--glow-primary);
+}
+
+.insigniaEdicion {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  background-color: var(--color-primary);
+  color: var(--color-bg-dark);
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--radius-sm);
+}
+
+.figuraEquipacion {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.figuraEquipacion img {
+  width: 100%;
+  max-height: 380px;
+  object-fit: contain;
+  margin: 0 auto 0.75rem;
+  filter: drop-shadow(0 10px 15px rgba(0,0,0,0.5));
+}
+
+.figuraEquipacion figcaption {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  font-style: italic;
+}
+
+.infoEquipacion {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.infoEquipacion h3 {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.detallesTecnicos {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 1.25rem;
+  line-height: 1.5;
+  flex: 1;
+}
+
+.galeriaMiniaturas {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  background-color: var(--color-bg-dark);
+  padding: 0.75rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+}
+
+.galeriaMiniaturas img {
+  width: 50%;
+  height: 90px;
+  object-fit: contain;
+  border-radius: var(--radius-sm);
+  background-color: var(--color-surface);
+  padding: 0.35rem;
+  transition: transform 0.2s ease;
+}
+
+.galeriaMiniaturas img:hover {
+  transform: scale(1.05);
+}
+
+.precioYAccion {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid var(--color-border);
+  padding-top: 1.25rem;
+}
+
+.precioProducto {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--color-primary);
+}
+
+.botonComprar {
+  background-color: var(--color-primary);
+  color: var(--color-bg-dark);
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 0.65rem 1.4rem;
+  border-radius: var(--radius-sm);
+  transition: all 0.2s ease;
+}
+
+.botonComprar:hover {
+  background-color: var(--color-primary-hover);
+  box-shadow: var(--glow-primary);
+  transform: translateY(-2px);
+}
+
+/* Grilla de Merchandising y Ropa */
+.gridMerch {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.tarjetaMerch {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.2s ease;
+}
+
+.tarjetaMerch:hover {
+  border-color: var(--color-primary);
+  transform: translateY(-4px);
+}
+
+.tarjetaMerch figure {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.tarjetaMerch figure img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  margin-bottom: 0.5rem;
+}
+
+.tarjetaMerch figure figcaption {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+.tarjetaMerch h4 {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 0.4rem;
+}
+
+.tarjetaMerch p {
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+  line-height: 1.4;
+  margin-bottom: 1.25rem;
+  flex: 1;
+}
+
+.pieTarjetaMerch {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid var(--color-border);
+  padding-top: 1rem;
+}
+
+.botonComprarSecundario {
+  background-color: transparent;
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0.45rem 1rem;
+  border-radius: var(--radius-sm);
+  transition: all 0.2s ease;
+}
+
+.botonComprarSecundario:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  background-color: var(--color-bg-dark);
+}
+
+/* 14. ESTILOS DE ACTUALIDAD Y NOTICIAS */
+.seccionNoticiaDestacada {
+  margin-bottom: 5rem;
+}
+
+.tarjetaNoticiaPrincipal {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  box-shadow: var(--shadow-card);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjetaNoticiaPrincipal:hover {
+  border-color: var(--color-primary);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.7), var(--glow-primary);
+}
+
+.figuraNoticiaPrincipal {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  min-height: 380px;
+}
+
+.figuraNoticiaPrincipal img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.tarjetaNoticiaPrincipal:hover .figuraNoticiaPrincipal img {
+  transform: scale(1.03);
+}
+
+.insigniaCategoria {
+  position: absolute;
+  top: 1.25rem;
+  left: 1.25rem;
+  background-color: var(--color-primary);
+  color: var(--color-bg-dark);
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 0.4rem 1rem;
+  border-radius: var(--radius-sm);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+.cuerpoNoticiaPrincipal {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.metaNoticia {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  margin-bottom: 1rem;
+}
+
+.cuerpoNoticiaPrincipal h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3.2vw, 2.6rem);
+  font-weight: 800;
+  line-height: 1.15;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 1.25rem;
+}
+
+.entradillaNoticia {
+  color: var(--color-text);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.parrafoNoticia {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.botonNoticiaDestacada {
+  align-self: flex-start;
+  background-color: var(--color-primary);
+  color: var(--color-bg-dark);
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 0.85rem 1.8rem;
+  border-radius: var(--radius-sm);
+  transition: all 0.2s ease;
+}
+
+.botonNoticiaDestacada:hover {
+  background-color: var(--color-primary-hover);
+  box-shadow: var(--glow-primary);
+  transform: translateY(-2px);
+}
+
+/* Grilla de Otras Noticias */
+.seccionOtrasNoticias {
+  margin-bottom: 4rem;
+}
+
+.gridNoticias {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.75rem;
+  margin-top: 2.5rem;
+}
+
+.tarjetaNoticia {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.25s ease;
+}
+
+.tarjetaNoticia:hover {
+  border-color: var(--color-primary);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card);
+}
+
+.cabeceraTarjetaNoticia {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+
+.insigniaCategoriaSecundaria {
+  background-color: rgba(182, 255, 0, 0.12);
+  color: var(--color-primary);
+  border: 1px solid rgba(182, 255, 0, 0.3);
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-sm);
+}
+
+.cabeceraTarjetaNoticia time {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.tarjetaNoticia h3 {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 800;
+  line-height: 1.25;
+  text-transform: uppercase;
+  margin-bottom: 0.85rem;
+  color: var(--color-text);
+}
+
+.tarjetaNoticia p {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+  flex: 1;
+}
+
+.pieTarjetaNoticia {
+  border-top: 1px solid var(--color-border);
+  padding-top: 1rem;
+}
+
+.enlaceLeerMas {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  letter-spacing: 0.5px;
+  transition: letter-spacing 0.2s ease;
+}
+
+.enlaceLeerMas:hover {
+  letter-spacing: 1.5px;
+}
+
+/* 15. RESPONSIVE BÁSICO (MOBILE FIRST) */
+@media (max-width: 768px) {
+  #menuNavegacion {
+    padding: 0 1rem;
+  }
+
+  #menuNavegacion nav {
+    display: none;
+  }
+
+  #seccionProximoPartido article {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .campoFila,
+  .opcionesRadio {
+    grid-template-columns: 1fr;
+  }
+
+  .formularioSocio {
+    padding: 1.5rem;
+  }
+
+  .tarjetaNoticiaPrincipal {
+    grid-template-columns: 1fr;
+  }
+
+  .cuerpoNoticiaPrincipal {
+    padding: 1.75rem;
+  }
+
+  .figuraNoticiaPrincipal {
+    min-height: 250px;
+  }
+}
+

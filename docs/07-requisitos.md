@@ -37,11 +37,11 @@ Seguimiento de los requisitos frente a los archivos que existen actualmente. La 
 
 | Requisito | Estado actual | Dónde / siguiente paso |
 |---|---|---|
-| Mínimo 7 páginas enlazadas | Pendiente; solo existe `html/index.html` | [Páginas previstas](04-paginas.md) |
-| `header`, `nav`, `main`, `section`, `article`, `aside`, `footer` | Presentes en la portada; falta extender la estructura al resto de páginas | `html/index.html` |
-| Jerarquía de encabezados | La portada usa `h1`, `h2`, `h3` y `h4`; revisar y mantener la jerarquía al crear el resto de páginas | `html/index.html` |
-| Tabla de datos con `thead`, `tbody`, `th` | Pendiente; no hay tablas implementadas | [Páginas previstas](04-paginas.md) |
-| Formularios completos | Pendiente; los cuatro formularios solo están especificados | [Formularios](05-formularios.md) |
+| Mínimo 7 páginas enlazadas | En progreso; portada en `index.html` y 8 páginas interiores planificadas | [Páginas previstas](04-paginas.md) |
+| `header`, `nav`, `main`, `section`, `article`, `aside`, `footer` | Presentes en la portada; se replicará la misma estructura semántica en el resto de páginas | `index.html` / `pages/*.html` |
+| Jerarquía de encabezados | La portada usa `h1`, `h2`, `h3` y `h4`; mantener la jerarquía en cada página | Todas las páginas |
+| Tabla de datos con `thead`, `tbody`, `th` | Prevista como tabla comparativa de tipos de abono, precios y ventajas | `pages/hazte-socio.html` |
+| Formularios completos | Previstos formularios con validación HTML5 (`hazte-socio.html` y `contacto.html`) | [Formularios](05-formularios.md) |
 
 **Leyenda:** “Definido” indica que existe una propuesta documental. Los elementos indicados como presentes solo están implementados en la portada, salvo que se indique lo contrario.
 

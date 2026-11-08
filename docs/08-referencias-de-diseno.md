@@ -1,30 +1,30 @@
-# 🔎 Referencias de diseño
+# 🔎 Referencias de diseño e identidad visual
 
-Referencia visual propuesta: **Rōnin FC** — [roninfc.digital](https://roninfc.digital/). La tabla indica qué elementos de la portada ya se han implementado y cuáles siguen pendientes.
+Este documento recoge el análisis del estándar visual y la estructura estética que guiarán el desarrollo de **Byte City FC**.
 
-> Solo se toma como referencia el **diseño y la estructura**. No se copian logos, textos, imágenes ni el diseño al pie de la letra: Byte City es un club ficticio y tiene su propia identidad.
+> El objetivo es lograr una identidad visual moderna, digital y deportiva: una estética oscura (*dark mode*), limpia y minimalista inspirada en los clubes de fútbol de nueva generación que unen deporte, tecnología y cultura urbana.
 
-## Qué se toma de referencia
+## Principios y elementos de diseño
 
-| Elemento de Rōnin FC | Cómo se adapta a Byte City | Página / archivo |
+| Elemento de referencia | Cómo se adapta a Byte City FC | Ubicación / Archivo |
 |---|---|---|
-| Hero con escudo grande, lema y dos botones | Portada implementada con escudo, lema «Play - code..» y enlaces a Partidos y Equipo | `html/index.html` |
-| Tarjeta de próximo partido con escudos, «VS», hora y estadio | Implementada parcialmente con competición, jornada, escudos, equipos y hora; fecha, estadio y detalle pendientes | `html/index.html` |
-| «Quiénes somos» con Historia, Estadio y Equipo | Implementado parcialmente con artículos de Historia y Estadio; bloque Equipo y página `club.html` pendientes | `html/index.html` |
-| Tres tarjetas de datos (entrenador, competición, temporada) | Pendientes de implementar | `html/index.html` |
-| Menú corto con «Club» desplegable | Enlaces de navegación y submenú definidos en HTML; el comportamiento visual desplegable requiere CSS | `html/index.html` |
-| Pie con navegación, redes, texto legal y créditos | Pie implementado con enlaces a Aviso legal y Contacto; redes y boletín pendientes | `html/index.html` |
-| Aviso legal como página aparte | Enlace presente; la página aún no está creada | `legal.html` (pendiente) |
-| Fondo negro, estética minimalista y detalle en japonés | Paleta negro y verde lima propuesta; aún no hay CSS que la aplique | `css/base.css` (pendiente) |
+| **Hero de gran impacto** con escudo centrado, lema y dos llamadas a la acción (CTAs) | Portada con el escudo oficial, el lema «Play Code Win» y accesos directos a Partidos y Plantilla | `index.html` |
+| **Tarjeta de próximo partido** con escudos enfrentados, hora, competición y estadio | Bloque visual moderno con escudos de Byte City FC vs. Code United FC, detalles del encuentro y cuenta atrás estética | `index.html` / `pages/partidos.html` |
+| **Tarjetas métricas clave** (temporada, competición, estadio) | Bloques destacados en formato KPI / métricas resumen del club | `index.html` |
+| **Sección institucional («El Club»)** con historia, estadio y afición | Diseño editorial en rejilla con tipografía condensada y bloques limpios | `index.html` / `pages/club.html` |
+| **Escaparate de equipaciones («Nuestra Piel»)** | Muestra de primera, segunda y tercera equipación con fotografía y estética *streetwear* | `pages/nuestra-piel.html` |
+| **Menú de navegación minimalista** con submenú desplegable en «Club» | Menú superior con navegación rápida y botón destacado en verde lima para «Hazte socio» | Todas las páginas |
+| **Pie de página corporativo** con navegación, aviso legal y enlaces | Footer estructurado con enlaces semánticos y derechos de autor | Todas las páginas |
+| **Estética oscura y acento de contraste** | Fondo negro `#080F0E` y acento verde lima neón `#B6FF00` para botones, badges y detalles clave | `css/base.css` |
 
-## Qué no se copia
+## Criterios técnicos de adaptación
 
-| Elemento | Motivo |
+| Criterio | Decisión técnica en Byte City FC |
 |---|---|
-| Logo, textos, imágenes y diseño al pie de la letra | Es un club real; Byte City debe tener identidad propia |
-| Cuenta atrás del próximo partido | Necesita JavaScript (el proyecto es un sitio estático) |
-| Mapa interactivo del estadio | Necesita JavaScript; se sustituye por una imagen |
-| Sección «Directo» | Necesita JavaScript y contenido en tiempo real |
+| **Pureza de lenguajes** | Todo el diseño se implementará con **HTML5 semántico y CSS3 puro** (Flexbox y Grid), sin frameworks pesados ni dependencias externas. |
+| **Interactividad sin dependencias** | Los desplegables y efectos hover se resolverán mediante transiciones y pseudoclases CSS (`:hover`, `:focus-within`), aptos para el módulo de Lenguajes de Marcas. |
+| **Accesibilidad (a11y)** | Ratios de contraste adecuados según WCAG (texto negro sobre verde lima, texto blanco roto sobre negro/gris). |
+
 
 ---
 

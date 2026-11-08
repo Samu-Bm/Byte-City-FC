@@ -17,19 +17,18 @@ El calendario, la fecha y el estadio del próximo encuentro no aparecen todavía
 | # | Página | Archivo |
 |:-:|---|---|
 | 1 | Inicio | `index.html` |
-| 2 | Club | `club.html` |
-| 3 | Equipo | `equipo.html` |
-| 4 | Ficha de jugador | `jugador.html` |
-| 5 | Partidos | `partidos.html` |
-| 6 | Detalle de partido | `partido.html` |
-| 7 | Clasificación | `clasificacion.html` |
-| 8 | Nuestra piel | `nuestra-piel.html` |
-| 9 | Actualidad | `actualidad.html` |
-| 10 | Noticia | `noticia.html` |
-| 11 | Hazte socio | `hazte-socio.html` |
-| 12 | Gracias | `gracias.html` |
-| 13 | Contacto | `contacto.html` |
-| 14 | Aviso legal | `legal.html` |
+| 2 | Club | `pages/club.html` |
+| 3 | Equipo | `pages/equipo.html` |
+| 4 | Ficha de jugador | `pages/jugador.html` |
+| 5 | Partidos | `pages/partidos.html` |
+| 6 | Detalle de partido | `pages/partido.html` |
+| 7 | Nuestra piel (Equipaciones y Tienda) | `pages/nuestra-piel.html` |
+| 8 | Actualidad | `pages/actualidad.html` |
+| 9 | Noticia | `pages/noticia.html` |
+| 10 | Hazte socio (Abonos con Tabla y Formulario) | `pages/hazte-socio.html` |
+| 11 | Gracias | `pages/gracias.html` |
+| 12 | Contacto | `pages/contacto.html` |
+| 13 | Aviso legal | `pages/legal.html` |
 
 ---
 
@@ -144,18 +143,7 @@ Ficha de ejemplo de un encuentro ya disputado.
 
 ---
 
-## 🏆 Clasificación — `clasificacion.html`
-
-| Bloque | Contenido |
-|---|---|
-| **Tabla general** | Posición, equipo, PJ, PG, PE, PP, GF, GC, DG, Pts (8 equipos, Byte City resaltado) |
-| **Leyenda** | Significado de cada abreviatura (`<abbr title="...">`) |
-| **Estadísticas del equipo** | Tabla de máximos goleadores y de asistentes |
-| **Datos de la temporada** | Racha, victorias en casa/fuera, goles totales |
-
----
-
-## 👕 Nuestra piel — `nuestra-piel.html`
+## 👕 Nuestra piel — `pages/nuestra-piel.html`
 
 | Bloque | Contenido |
 |---|---|

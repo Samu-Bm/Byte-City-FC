@@ -27,6 +27,10 @@ Las páginas y funcionalidades detalladas en la documentación que no aparecen e
 ```text
 .
 ├── README.md
+├── index.html
+├── css/
+│   └── base.css
+├── pages/
 ├── docs/
 │   ├── 01-planificacion.md
 │   ├── 02-estructura-del-sitio.md
@@ -38,8 +42,6 @@ Las páginas y funcionalidades detalladas en la documentación que no aparecen e
 │   ├── 08-referencias-de-diseno.md
 │   ├── mockups/
 │   └── validacion/
-├── html/
-│   └── index.html
 └── img/
     ├── aficion/
     ├── codeunitedfc/

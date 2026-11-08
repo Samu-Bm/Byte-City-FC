@@ -1,87 +1,64 @@
-# 📝 Formularios
+# 📝 Formularios e interactividad de datos
 
-Se proponen **cuatro formularios** para futuras páginas. Ninguno está implementado: la portada actual no contiene formularios y las páginas previstas para alojarlos aún no existen. Las siguientes tablas son especificaciones, no una descripción de formularios funcionales.
+Especificación de formularios y captura de datos del sitio web de **Byte City FC**.
 
-Cuando se implementen, todos deberán cumplir estas reglas:
-
-- Cada campo tiene su `<label for="...">` vinculado al `id` del input.
-- Los campos obligatorios llevan el atributo `required`.
-- Cada input lleva `name` y `id` únicos.
-- Los campos relacionados se agrupan con `<fieldset>` y `<legend>`.
-- El envío se hace con `<button type="submit">`.
-- El destino y el tratamiento del envío deberán definirse al implementar cada formulario; una página estática por sí sola no procesa ni almacena solicitudes.
-
-| Formulario | Página | Objetivo |
-|---|---|---|
-| Inscripción de socio | `hazte-socio.html` | Hacerse socio |
-| Contacto | `contacto.html` | Consultas al club |
-| Pedido simulado | `nuestra-piel.html` | Comprar equipaciones (ficticio) |
-| Boletín | Pie de todas las páginas | Recibir novedades |
+> **Nota sobre el alcance:**  
+> - La página `pages/hazte-socio.html` es primordialmente una **página estática informativa** donde se presentan las 3 modalidades de cuota, sus costes y ventajas asociadas.
+> - La página `pages/contacto.html` centraliza los datos directos (correo electrónico, redes sociales, teléfono, ubicación) acompañados de un disclaimer oficial y un formulario básico de contacto.
+> - La tienda `pages/nuestra-piel.html` presenta las 3 equipaciones oficiales y merchandising, permitiendo ver en detalle imágenes, título y descripción de cada producto.
 
 ---
 
-## 🎟️ Formulario de inscripción de socio
+## Directrices técnicas de accesibilidad en formularios
 
-| Grupo (`fieldset`) | Campo | Tipo de input | Obligatorio |
-|---|---|---|:---:|
-| Datos personales | Nombre | `text` | ✅ |
-| Datos personales | Apellidos | `text` | ✅ |
-| Datos personales | Correo electrónico | `email` | ✅ |
-| Datos personales | Teléfono | `tel` | ❌ |
-| Datos personales | Fecha de nacimiento | `date` | ✅ |
-| Datos personales | Provincia | `select` | ✅ |
-| Cuenta | Usuario | `text` | ✅ |
-| Cuenta | Contraseña | `password` | ✅ |
-| Cuenta | Foto para el carné | `file` | ❌ |
-| Modalidad | Modalidad de socio (Junior / Joven / Adulto / Premium) | `radio` | ✅ |
-| Modalidad | Nº de acompañantes | `number` | ❌ |
-| Preferencias | ¿Cómo nos conociste? | `textarea` | ❌ |
-| Preferencias | Quiero recibir novedades por email | `checkbox` | ❌ |
-| Preferencias | Acepto las condiciones y la política de privacidad | `checkbox` | ✅ |
-| — | Enviar solicitud | `<button type="submit">` | — |
+Cuando se implementen formularios en el proyecto, deberán cumplir las siguientes pautas estándar de HTML5:
 
-> Si en clase se han visto otros tipos de input (`range`, `url`, `color`...), se pueden sustituir o añadir.
+1. Cada campo llevará su `<label for="...">` estrictamente emparejado con el `id` del control.
+2. Los campos imprescindibles se marcarán con el atributo booleano `required`.
+3. Cada input contendrá atributos `name` y `id` únicos y descriptivos.
+4. Las agrupaciones lógicas de campos se estructurarán con `<fieldset>` y `<legend>`.
+5. El botón de acción empleará `<button type="submit">`.
+6. En un entorno web estático, la validación se realiza mediante los tipos y atributos nativos de HTML5 (`type="email"`, `type="tel"`, `minlength`, `pattern`, etc.).
 
 ---
 
-## ✉️ Formulario de contacto
+## ✉️ Formulario de contacto — `pages/contacto.html`
 
-| Campo | Tipo de input | Obligatorio |
-|---|---|:---:|
-| Nombre | `text` | ✅ |
-| Correo electrónico | `email` | ✅ |
-| Teléfono | `tel` | ❌ |
-| Asunto (Socios / Tienda / Prensa / Otros) | `select` | ✅ |
-| Mensaje | `textarea` | ✅ |
-| Acepto la política de privacidad | `checkbox` | ✅ |
-| Enviar mensaje | `<button type="submit">` | — |
+Acompañando a los canales directos (correo, teléfono y RRSS) y al disclaimer de la entidad:
 
----
-
-## 👕 Formulario de pedido (simulado)
-
-| Campo | Tipo de input | Obligatorio |
-|---|---|:---:|
-| Producto | `select` | ✅ |
-| Talla (S / M / L / XL) | `radio` | ✅ |
-| Cantidad | `number` (`min`, `max`) | ✅ |
-| Nombre para la camiseta | `text` | ❌ |
-| Dorsal | `number` | ❌ |
-| Correo electrónico | `email` | ✅ |
-| Envío exprés | `checkbox` | ❌ |
-| Comprar | `<button type="submit">` | — |
+| Campo | Etiqueta / Input | Tipo | Obligatorio | Descripción |
+|---|---|:---:|:---:|---|
+| Nombre completo | `<input>` | `text` | ✅ | Identificación del aficionado o solicitante |
+| Correo electrónico | `<input>` | `email` | ✅ | Canal para responder a la consulta |
+| Teléfono de contacto | `<input>` | `tel` | ❌ | Opcional para llamadas de atención |
+| Motivo / Asunto | `<select>` | Lista | ✅ | Opciones: *Atención al Socio, Tienda, Prensa, General* |
+| Mensaje | `<textarea>` | Texto largo | ✅ | Contenido detallado de la consulta |
+| Aceptación de política | `<input>` | `checkbox` | ✅ | Conformidad con el aviso legal del club |
+| Envío | `<button>` | `submit` | — | Envío del mensaje |
 
 ---
 
-## 📬 Formulario de boletín
+## 📬 Formulario de boletín informativo (Newsletter) — `<footer>`
 
-Incluido en el `<footer>` de **todas** las páginas.
+Ubicado en el pie de página de todas las vistas del sitio para captación de seguidores:
 
-| Campo | Tipo de input | Obligatorio |
-|---|---|:---:|
-| Correo electrónico | `email` | ✅ |
-| Acepto recibir novedades | `checkbox` | ✅ |
-| Suscribirme | `<button type="submit">` | — |
+| Campo | Etiqueta / Input | Tipo | Obligatorio |
+|---|---|:---:|:---:|
+| Correo electrónico | `<input>` | `email` | ✅ |
+| Consentimiento de novedades | `<input>` | `checkbox` | ✅ |
+| Suscribirse | `<button>` | `submit` | — |
+
+---
+
+## 🎟️ Modalidades de Socio (Página estática) — `pages/hazte-socio.html`
+
+A diferencia de un proceso transaccional complejo, esta sección se concibe como una **guía estática** para consultar las 3 opciones disponibles:
+
+| Modalidad | Rango orientativo | Cuota anual | Beneficios incluidos |
+|---|---|:---:|---|
+| **Cuota Joven / Junior** | Hasta 20 años | 35 € | Carné oficial, bienvenida digital y 10% en tienda |
+| **Cuota Adulto** | Aficionado general | 85 € | Carné oficial, prioridad en compra de entradas y 15% en tienda |
+| **Cuota Premium / VIP** | Aficionado especial | 160 € | Asiento preferente, carné exclusivo, bufanda y acceso a eventos |
 
 ---
 

@@ -1,6 +1,6 @@
 # 🎨 Guía de estilo
 
-> La paleta y las tipografías de este documento son la identidad visual **propuesta**. Aún no se han aplicado en CSS. La lista de recursos gráficos refleja el contenido disponible actualmente.
+> La paleta y las tipografías de este documento definen la identidad visual de **Byte City FC**, incorporadas en `css/base.css`. La lista de recursos gráficos refleja el contenido disponible en el proyecto.
 
 ## Paleta oficial
 
@@ -35,11 +35,12 @@
 |---|---|---|
 | `img/escudo/` | `Escudo.svg` y `Escudo-Sin-Fondo.png` | Disponible |
 | `img/codeunitedfc/` | Escudo de Code United FC, rival mostrado en el próximo partido | Disponible |
-| `img/equipaciones/Primera equipacion/` | Tres imágenes de la primera equipación | Disponible |
-| `img/equipaciones/Segunda equipacion/` | Tres imágenes de la segunda equipación | Disponible |
-| `img/equipaciones/Tercera equipacion/` | Tres imágenes de la tercera equipación | Disponible |
-| `img/ropa/` | Balón, bufanda, gorra, sudadera, chándal y ropa de entrenamiento | Disponible |
-| `img/logo/`, `img/jugadores/`, `img/estadio/`, `img/noticias/`, `img/aficion/` | Sin imágenes todavía; se conservan con `.gitkeep` | Pendiente |
+| `img/equipaciones/Primera equipacion/` | Imágenes de la primera equipación | Disponible |
+| `img/equipaciones/Segunda equipacion/` | Imágenes de la segunda equipación | Disponible |
+| `img/equipaciones/Tercera equipacion/` | Imágenes de la tercera equipación | Disponible |
+| `img/ropa/` | Balón, bufanda, gorra, sudadera, chándal y ropa deportiva | Disponible |
+| `img/noticias/` | Imágenes para actualidad, crónicas y presentaciones | Disponible |
+| `img/logo/`, `img/jugadores/`, `img/estadio/`, `img/aficion/` | Directorios reservados para próximas imágenes | Conservados con `.gitkeep` |
 
 La portada usa los dos escudos para identificar a los equipos del próximo partido. Las futuras imágenes deberán tener procedencia adecuada y texto `alt` descriptivo cuando aporten información. Los nombres de archivo y las subcarpetas de equipaciones contienen espacios y deben referenciarse respetando exactamente su ruta.
 

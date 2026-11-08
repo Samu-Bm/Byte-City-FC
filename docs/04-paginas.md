@@ -1,242 +1,171 @@
 # 📄 Páginas y contenidos
 
-Propuesta de contenido para las **14 páginas previstas** del sitio. La portada `html/index.html` ya está implementada parcialmente. Las otras 13 páginas todavía no existen.
+Especificación detallada del contenido y la estructura de las páginas de **Byte City FC**, adaptadas a los requisitos del proyecto.
 
-## Estado de la portada implementada
+## Estado actual del sitio
 
-La página existente incluye:
+- **Página implementada:** `index.html` (ubicada en la raíz del proyecto), con cabecera, navegación, hero con lema, tarjeta de próximo partido, extracto de historia/estadio y pie de página.
+- **Hojas de estilo:** `css/base.css` (variables de color, tipografía y reset inicial).
+- **Páginas interiores:** planificadas dentro de la carpeta `pages/` para su desarrollo.
 
-- Cabecera con escudo, nombre del club y menú de navegación.
-- Portada con escudo, lema «Play - code..» y enlaces a Partidos y Equipo.
-- Próximo partido de Liga Digital entre Byte City FC y Code United FC, con hora y escudos.
-- Sección «Quiénes somos» con historia y estadio; la ubicación se presenta en un `<aside>`.
-- Pie de página con aviso legal y contacto.
-
-El calendario, la fecha y el estadio del próximo encuentro no aparecen todavía en la página. Los enlaces a páginas interiores apuntan a destinos aún no implementados.
-
-| # | Página | Archivo |
-|:-:|---|---|
-| 1 | Inicio | `index.html` |
-| 2 | Club | `pages/club.html` |
-| 3 | Equipo | `pages/equipo.html` |
-| 4 | Ficha de jugador | `pages/jugador.html` |
-| 5 | Partidos | `pages/partidos.html` |
-| 6 | Detalle de partido | `pages/partido.html` |
-| 7 | Nuestra piel (Equipaciones y Tienda) | `pages/nuestra-piel.html` |
-| 8 | Actualidad | `pages/actualidad.html` |
-| 9 | Noticia | `pages/noticia.html` |
-| 10 | Hazte socio (Abonos con Tabla y Formulario) | `pages/hazte-socio.html` |
-| 11 | Gracias | `pages/gracias.html` |
-| 12 | Contacto | `pages/contacto.html` |
-| 13 | Aviso legal | `pages/legal.html` |
+| # | Página | Archivo | Descripción resumida |
+|:-:|---|---|---|
+| 1 | Inicio | `index.html` | Portada institucional, hero, próximo partido y accesos rápidos |
+| 2 | Club | `pages/club.html` | Historia, estadio y afición (peñas y contador de socios) |
+| 3 | Equipo | `pages/equipo.html` | Plantilla por demarcación (porteros, defensas, medios, delanteros) + cuerpo técnico |
+| 4 | Partidos | `pages/partidos.html` | Calendario con 4–5 partidos recientes (matchdays / tablas) |
+| 5 | Nuestra piel (Tienda) | `pages/nuestra-piel.html` | Tienda online: 3 equipaciones + merchandising con detalle de producto |
+| 6 | Actualidad | `pages/actualidad.html` | Portal de noticias con acceso a fotos y texto completo de cada noticia |
+| 7 | Hazte socio | `pages/hazte-socio.html` | Página estática informativa con 3 cuotas diferenciadas y sus beneficios |
+| 8 | Contacto | `pages/contacto.html` | Correo electrónico, teléfono, redes sociales y disclaimer de contacto |
+| 9 | Aviso legal | `pages/legal.html` | Aviso legal informativo y carácter académico del sitio |
 
 ---
 
-> **Estructura común prevista para las páginas**
-> - `<header>` con el logo y `<nav>` con el menú principal (con **Club** como submenú desplegable y **Hazte socio** como botón destacado).
-> - `<main>` con el contenido único de la página.
-> - `<footer>` con: contacto, enlaces de interés, redes sociales ficticias, datos del club, enlace al [aviso legal](#️-aviso-legal--legalhtml) y **formulario de boletín** (email + casilla de consentimiento + botón).
-> - Un solo `<h1>` por página; después `<h2>` y `<h3>` sin saltarse niveles.
+> **Estructura semántica común en todas las páginas:**
+> - `<header>`: Logo/escudo del club y `<nav>` con el menú de navegación principal.
+> - `<main>`: Contenedor único del contenido de cada página.
+> - `<footer>`: Correo de contacto, redes sociales ficticias, enlaces legales y aviso de copyright.
+> - Jerarquía estricta de encabezados: un único `<h1>` por página, seguido de `<h2>` y `<h3>` estructurados.
 
 ---
 
-## 🏠 Inicio — `html/index.html`
+## 🏠 1. Inicio — `index.html`
 
-La tabla siguiente recoge el alcance previsto para la portada; los bloques que aún no se mencionan en el apartado «Estado de la portada implementada» siguen pendientes.
+Página principal del club situada en la raíz del repositorio.
 
-| Bloque | Etiqueta | Contenido |
+| Bloque | Elemento HTML | Contenido |
 |---|---|---|
-| Banner | `<section>` | Implementado con escudo, lema *«Play - code..»* y enlaces **Ver Partidos** y **Conoce al Equipo** |
-| Quiénes somos | `<section>` | Implementado con artículos de historia y estadio; la ubicación se agrupa en un `<aside>` |
-| Datos rápidos | `<section>` con 3 `<article>` | Tarjetas: entrenador, competición y temporada |
-| Próximo partido | `<section>` y `<article>` | Implementado con competición, jornada, equipos, escudos y hora; fecha, estadio y enlace al detalle pendientes |
-| Último resultado | `<aside>` | Marcador, rival y enlace a la crónica |
-| Últimas noticias | `<section>` con 3 `<article>` | Imagen, título, fecha y enlace |
-| Jugadores destacados | `<section>` con 3 `<article>` | Foto, nombre, dorsal, posición |
-| Equipaciones | `<section>` | Imagen de la primera equipación + enlace a Nuestra piel |
-| Mini clasificación | `<section>` | Tabla con los 5 primeros puestos |
-| Llamada a socios | `<section>` | Texto breve + botón a `hazte-socio.html` |
-
-**Encabezados implementados:** `h1` BYTE CITY FC → `h2` Próximo partido / Quiénes somos → `h3` Nuestra historia / Nuestro estadio → `h4` Ubicación. Los demás encabezados indicados en la propuesta siguen pendientes.
+| **Cabecera** | `<header>` | Escudo, nombre del club y barra de navegación `<nav>` |
+| **Hero / Banner** | `<section>` | Escudo destacado, lema *«PLAY - CODE - WIN»* y botones de acceso directo a Partidos y Equipo |
+| **Próximo partido** | `<section>` / `<article>` | Encuentro de Liga Digital: escudos de Byte City FC vs. Code United FC, fecha y hora |
+| **Quiénes somos** | `<section>` | Resumen introductorio del club y de su sede/estadio con enlace a `pages/club.html` |
+| **Pie de página** | `<footer>` | Enlaces a contacto, redes sociales y aviso legal |
 
 ---
 
-## 🛡️ Club — `club.html`
+## 🛡️ 2. Club — `pages/club.html`
 
-| Bloque | Contenido |
-|---|---|
-| **Historia** | Año de fundación, origen del nombre (ciudad tecnológica), evolución por etapas (lista ordenada `<ol>` tipo línea del tiempo) |
-| **Identidad** | Imagen del escudo, explicación de sus elementos, colores corporativos con muestras |
-| **Filosofía y valores** | Misión, visión y 4 valores (por ejemplo: innovación, trabajo en equipo, esfuerzo, comunidad), uno por `<article>` |
-| **Estadio** | Nombre, capacidad, ubicación, año de inauguración, 3 imágenes (`<figure>` + `<figcaption>`) y ficha técnica en `<dl>` |
-| **Afición** | Presentación de la afición y su historia, fotografías de seguidores (`<figure>`), actividades y eventos, y enlace a **Hazte socio** |
-| **Palmarés** | Tabla de títulos: competición, temporadas, nº de títulos |
+Sección institucional dividida en tres apartados clave con anclas de navegación directa:
 
-**Menú interno** (enlaces ancla): Historia · Identidad · Valores · Estadio · Afición · Palmarés.
+### A) Historia (`#historia`)
+- Narrativa sobre el origen y la fundación del club en el entorno tecnológico de Byte City.
+- Fotografías históricas representativas (`<figure>` con `<figcaption>`).
+- Evolución y momentos cumbre explicados de forma clara y amena.
 
-**Submenú «Club» del menú principal:** apunta a las anclas `club.html#historia`, `club.html#estadio` y `club.html#aficion`, por lo que cada bloque lleva su `id`.
+### B) Estadio (`#estadio`)
+- Fotografías del estadio oficial del club.
+- Información esencial y ficha técnica concisa:
+  - Año de creación/inauguración.
+  - Ubicación dentro de Byte City.
+  - Capacidad de espectadores y tipo de superficie.
 
-**Elemento obligatorio que cubre:** tabla de datos (palmarés).
-
----
-
-## 👥 Equipo — `equipo.html`
-
-Plantilla organizada por posiciones, cada una en su `<section>`:
-
-| Sección | Nº orientativo |
-|---|:---:|
-| Porteros | 3 |
-| Defensas | 6 |
-| Centrocampistas | 6 |
-| Delanteros | 4 |
-| Cuerpo técnico | 3 |
-
-**Tarjeta de jugador** (`<article>`): foto, nombre, dorsal, posición, nacionalidad, edad, altura y enlace a su ficha.
-
-**Tabla de estadísticas individuales:** jugador, partidos, goles, asistencias, minutos.
-
-> Los filtros por posición se resuelven con un **menú de enlaces ancla** a cada sección, sin JavaScript.
+### C) Afición (`#aficion`)
+- Homenaje a la hinchada y comunidad del club con fotos de la grada y la afición en día de partido.
+- **Peñas oficiales actuales:** listado y mención a las peñas activas del club.
+- **Contador de socios:** dato destacado en texto plano indicando la masa social actual de Byte City FC (ejemplo: *«Más de 12.500 socios activos»*).
 
 ---
 
-## 🧑‍🎤 Ficha de jugador — `jugador.html`
+## 👥 3. Equipo — `pages/equipo.html`
 
-Una ficha completa de ejemplo.
+Presentación completa de la plantilla y el cuerpo técnico organizada de forma clara por demarcaciones:
 
-| Bloque | Contenido |
-|---|---|
-| Cabecera | Foto grande, nombre, dorsal, posición |
-| Datos personales | `<dl>`: fecha de nacimiento, edad, nacionalidad, altura, peso, pie hábil |
-| Biografía | 2 párrafos |
-| Trayectoria | Tabla: temporada, equipo, partidos, goles |
-| Estadísticas de la temporada | Tabla: goles, asistencias, minutos, tarjetas |
-| Navegación | Enlace de vuelta a la plantilla |
+### Demarcaciones de jugadores
+1. **Porteros:** tarjetas individuales de los guardametas con foto, nombre y dorsal.
+2. **Defensas:** defensas centrales y laterales con foto, nombre y dorsal.
+3. **Centrocampistas:** mediocentros defensivos y creativos con foto, nombre y dorsal.
+4. **Delanteros:** extremos y delanteros centro con foto, nombre y dorsal.
 
----
+### Cuerpo técnico
+- **Primer Entrenador:** fotografía, nombre, trayectoria y rol en el banquillo.
+- **Segundo Entrenador:** fotografía, nombre y funciones tácticas en el cuerpo técnico.
 
-## 📅 Partidos — `partidos.html`
-
-| Bloque | Contenido |
-|---|---|
-| **Próximos partidos** | Tabla de calendario: jornada, fecha, hora, rival, competición, estadio |
-| **Resultados** | Tabla: jornada, fecha, local, marcador, visitante, enlace al detalle |
-| **Competiciones** | Separación por Liga y Copa mediante `<section>` distintas |
-
-**Rivales ficticios de ejemplo:** Real Compilers, Atlético Debug, Sporting Syntax, CF Cache, Deportivo Firewall, Racing Router.
-
-**Elemento obligatorio que cubre:** tablas con `<thead>`, `<tbody>` y `<th scope>`.
+*Cada miembro contará con su tarjeta en `<article>` con imagen, nombre, rol/posición y dorsal correspondiente.*
 
 ---
 
-## 📋 Detalle de partido — `partido.html`
+## 📅 4. Partidos — `pages/partidos.html`
 
-Ficha de ejemplo de un encuentro ya disputado.
+Seguimiento de la competición con foco en los partidos recientes:
 
-| Bloque | Contenido |
-|---|---|
-| Marcador | Equipos, escudos, resultado, fecha, estadio, competición |
-| Goleadores | Lista con minuto |
-| Alineaciones | Dos listas (titulares y suplentes) |
-| Estadísticas | Tabla comparativa: posesión, tiros, tiros a puerta, faltas, córners |
-| Crónica | Enlace a la noticia correspondiente |
-
----
-
-## 👕 Nuestra piel — `pages/nuestra-piel.html`
-
-| Bloque | Contenido |
-|---|---|
-| **Primera equipación** | Imágenes (frontal y trasera), colores, materiales, inspiración |
-| **Segunda equipación** | Ídem |
-| **Tercera equipación** | Ídem |
-| **Equipación de portero** | Ídem |
-| **Tienda** | Tabla o tarjetas de productos con nombre, descripción y precio |
-| **Formulario de pedido (simulado)** | Producto (`select`), talla (`radio`), cantidad (`number`), dorsal y nombre personalizados (`text`), email (`email`), envío exprés (`checkbox`), botón **Comprar** |
-
-Cada equipación en su propio `<article>` con `<figure>` y `<figcaption>`.
+- **4 a 5 partidos recientes:** resumen de los últimos encuentros disputados por el club.
+- **Formato visual:** presentación mediante tarjetas tipo *Matchday* con imágenes de los encuentros o mediante tablas semánticas (`<table>`, `<thead>`, `<tbody>`, `<th>`).
+- **Datos de cada partido:**
+  - Equipos enfrentados y escudos (local y visitante).
+  - Marcador y resultado final.
+  - Competición, jornada y fecha del encuentro.
+  - Fotografía ilustrativa del día del partido.
 
 ---
 
-## 📰 Actualidad — `actualidad.html`
+## 👕 5. Nuestra piel (Tienda) — `pages/nuestra-piel.html`
 
-| Bloque | Contenido |
-|---|---|
-| **Noticia destacada** | `<article>` grande con imagen, título, fecha y categoría |
-| **Listado de noticias** | 6 `<article>` con imagen, título, fecha, categoría y enlace |
-| **Categorías** | Menú de enlaces: Primer equipo · Crónicas · Previas · Fichajes · Entrevistas · Comunicados · Equipaciones |
-| **Multimedia** | Galería de fotos (`<figure>`) y 1–2 vídeos con `<video controls>` o incrustados |
-| **Aside** | Últimos resultados y enlace a Hazte socio |
+Página estructurada como una **tienda online** oficial del club, dividida en dos grandes bloques:
 
----
+### A) Equipaciones oficiales (Sección superior)
+- **Primera equipación (Home):** imagen frontal/trasera, título, descripción y precio.
+- **Segunda equipación (Away):** imagen frontal/trasera, título, descripción y precio.
+- **Tercera equipación (Alternative):** imagen frontal/trasera, título, descripción y precio.
 
-## 📄 Noticia — `noticia.html`
+### B) Merchandising y accesorios (Sección inferior)
+- Catálogo de productos oficiales: balones, gorras, bufandas, sudaderas y ropa de entrenamiento.
+- Presentación en rejilla de tarjetas de producto.
 
-Noticia completa de ejemplo.
-
-- `<article>` con `<h1>` título, `<time datetime>`, categoría, autor.
-- Imagen principal con `<figcaption>`.
-- Cuerpo en varios párrafos con un `<h2>` intermedio y una cita (`<blockquote>`).
-- `<aside>` con noticias relacionadas.
+### C) Ficha / Detalle de cada producto
+- Cada artículo permite abrirse (o cuenta con su ficha detallada) mostrando:
+  - Galería con distintas imágenes del mismo producto (diferentes ángulos o detalles).
+  - Título oficial del producto.
+  - Descripción de características, materiales y precio.
 
 ---
 
-## 🎟️ Hazte socio — `hazte-socio.html`
+## 📰 6. Actualidad — `pages/actualidad.html`
 
-Página para hacerse socio de Byte City y suscribirse a las novedades.
+Portal de noticias y actualidad de Byte City FC:
 
-**Bloques**
-
-| Bloque | Contenido |
-|---|---|
-| Presentación | Por qué hacerse socio y qué aporta formar parte de la comunidad |
-| **Tabla de modalidades** | Modalidad, cuota anual, ventajas |
-| Ventajas | Lista de beneficios (descuentos en tienda, entradas prioritarias, carné, boletín exclusivo) |
-| **Formulario de inscripción** | Ver [Formularios](05-formularios.md) |
-| Comunidad | Texto breve con enlace a la sección **Afición** de `club.html` |
-
-**Tabla de modalidades (propuesta)**
-
-| Modalidad | Cuota anual | Ventajas |
-|---|:---:|---|
-| Junior (hasta 14 años) | 30 € | Carné, boletín |
-| Joven (15–25) | 60 € | Carné, boletín, descuento en tienda |
-| Adulto | 100 € | Carné, boletín, descuento en tienda, entrada prioritaria |
-| Premium | 180 € | Todo lo anterior + asiento fijo y camiseta oficial |
-
-**Formulario de inscripción:** ver los campos completos en [Formularios](05-formularios.md#-formulario-de-inscripción-de-socio).
+- **Listado de noticias:** tarjetas con titular, fecha, fotografía de cabecera y entradilla.
+- **Acceso a la noticia completa:** cada noticia permite acceder a su página o sección de detalle para:
+  - Ver la galería o fotos del evento / suceso.
+  - Leer el cuerpo de la noticia en texto completo (`<article>`, párrafos, declaraciones y subtítulos).
 
 ---
 
-## ✅ Gracias — `gracias.html`
+## 🎟️ 7. Hazte socio — `pages/hazte-socio.html`
 
-Página de confirmación tras enviar la inscripción: mensaje de bienvenida, resumen de los siguientes pasos y enlaces de vuelta al inicio y a la tienda.
+Página estática informativa diseñada para dar a conocer las modalidades de abono y ventajas de ser socio:
+
+- **3 cuotas diferenciadas:**
+  1. **Cuota Joven / Junior:** cuota reducida para los aficionados más jóvenes.
+  2. **Cuota Adulto / Estándar:** modalidad completa para el seguidor general.
+  3. **Cuota Premium / VIP:** pase con acceso a zonas exclusivas y ventajas adicionales.
+- **Información detallada por cuota:**
+  - Precio / coste periódico (anual o mensual).
+  - Lista de beneficios incluidos (descuentos en tienda, acceso prioritario a entradas, carné físico/digital, asiento garantizado, etc.).
+- **Diseño estático:** comparativa limpia mediante tabla semántica o tarjetas de precios destacadas, sin necesidad de pasarela de pago real.
+
+---
+
+## ✉️ 8. Contacto — `pages/contacto.html`
+
+Página institucional de atención al aficionado y medios:
+
+- **Datos oficiales de contacto:**
+  - Correo electrónico oficial del club.
+  - Teléfono de atención al aficionado y oficinas.
+  - Enlaces a las redes sociales oficiales (RRSS ficticias: X, Instagram, YouTube).
+- **Disclaimer y horarios:** texto informativo sobre horarios de atención y advertencia de uso adecuado del canal.
+- **Ubicación:** mapa esquemático o dirección física en Byte City.
 
 ---
 
-## ✉️ Contacto — `contacto.html`
+## ⚖️ 9. Aviso legal — `pages/legal.html`
 
-| Bloque | Contenido |
-|---|---|
-| Datos del club | Dirección, teléfono, email, horario (`<address>`) |
-| Ubicación | Imagen del mapa del estadio |
-| **Formulario de contacto** (ver [Formularios](05-formularios.md)) | Nombre (`text`), email (`email`), teléfono (`tel`), asunto (`select`: Socios, Tienda, Prensa, Otros), mensaje (`textarea`), aceptación de privacidad (`checkbox`), botón de envío |
-| Redes sociales | Enlaces a los perfiles ficticios |
+Página informativa de cumplimiento y transparencia enlazada desde el pie:
 
-## ⚖️ Aviso legal — `legal.html`
-
-Página sencilla, enlazada desde el pie de todas las páginas.
-
-| Bloque | Etiqueta | Contenido |
-|---|---|---|
-| Naturaleza del sitio | `<section>` | Aclarar que Byte City es un club ficticio y que la web es un proyecto educativo |
-| Propiedad de contenidos | `<section>` | Origen de las imágenes y textos, y créditos de las fuentes utilizadas |
-| Privacidad | `<section>` | Qué se hace con los datos de los formularios (en este proyecto no se almacenan) |
-| Créditos | `<section>` | Autor del proyecto, módulo y ciclo formativo |
-
-**Encabezados:** `h1` Aviso legal → `h2` por cada bloque.
-
----
+- **Aviso legal estándar:** condiciones generales de uso del sitio web.
+- **Naturaleza del proyecto:** aclaración expresa de que Byte City FC es un club ficticio creado con fines exclusivamente académicos y formativos.
+- **Propiedad intelectual y créditos:** atribución de fuentes, recursos gráficos y autoría del proyecto.
 
 ---
 

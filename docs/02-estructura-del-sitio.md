@@ -1,6 +1,6 @@
 # 🗺️ Estructura del sitio
 
-> El sitemap describe el **alcance previsto**. Actualmente solo está implementada `html/index.html`; las demás páginas enlazadas son todavía pendientes. La estructura real de carpetas se muestra más abajo.
+Sitemap y organización de contenidos del sitio web oficial de **Byte City FC**.
 
 ## Mapa del sitio (Site Map)
 
@@ -9,57 +9,66 @@ flowchart TD
     A[🏠 index.html<br>Inicio] --> B[🛡️ pages/club.html<br>Club]
     A --> C[👥 pages/equipo.html<br>Equipo]
     A --> D[📅 pages/partidos.html<br>Partidos]
-    A --> E[👕 pages/nuestra-piel.html<br>Nuestra piel]
+    A --> E[👕 pages/nuestra-piel.html<br>Nuestra piel - Tienda]
     A --> F[📰 pages/actualidad.html<br>Actualidad]
-    A --> G[🎟️ pages/hazte-socio.html<br>Hazte socio y Abonos]
+    A --> G[🎟️ pages/hazte-socio.html<br>Hazte socio]
     A --> H[✉️ pages/contacto.html<br>Contacto]
     A --> I[⚖️ pages/legal.html<br>Aviso legal]
 
-    B --> B1[#historia]
-    B --> B2[#estadio]
-    B --> B3[#aficion]
+    B --> B1[#historia<br>Historia y fotos]
+    B --> B2[#estadio<br>Fotos, año y ubicación]
+    B --> B3[#aficion<br>Peñas y contador de socios]
 
-    C --> C1[jugador.html<br>Ficha de jugador]
-    D --> D1[partido.html<br>Detalle de partido]
-    F --> F1[noticia.html<br>Noticia completa]
-    G --> G1[gracias.html<br>Confirmación]
+    C --> C1[Porteros / Defensas / Medios / Delanteros]
+    C --> C2[Entrenador y 2º Entrenador]
+
+    D --> D1[4-5 Partidos recientes<br>Matchdays / Tablas]
+
+    E --> E1[Equipaciones 1ª, 2ª y 3ª]
+    E --> E2[Merchandising balones, gorras...]
+    E --> E3[Ficha producto con fotos y descripción]
+
+    F --> F1[Noticias con fotos y texto completo]
+
+    G --> G1[Página estática<br>3 Cuotas y beneficios]
+
+    H --> H1[Email, teléfono, RRSS y disclaimer]
+    I --> I1[Aviso legal y créditos]
 ```
 
 ## Menú principal
 
-| Posición | Enlace | Tipo | Destino |
-|:-:|---|---|---|
-| 1 | Inicio | Enlace | `index.html` |
-| 2 | Club | **Desplegable** | `pages/club.html` → Historia, Estadio, Afición (anclas) |
-| 3 | Equipo | Enlace | `pages/equipo.html` |
-| 4 | Partidos | Enlace | `pages/partidos.html` |
-| 5 | Nuestra piel | Enlace | `pages/nuestra-piel.html` |
-| 6 | Actualidad | Enlace | `pages/actualidad.html` |
-| 7 | **Hazte socio** | Botón destacado en verde lima | `pages/hazte-socio.html` |
+| Posición | Enlace | Tipo | Destino | Contenido / Secciones |
+|:-:|---|---|---|---|
+| 1 | **Inicio** | Enlace | `index.html` | Portada, hero con lema, próximo partido y resumen |
+| 2 | **Club** | Desplegable (CSS) | `pages/club.html` | Enlaces ancla: `#historia`, `#estadio`, `#aficion` |
+| 3 | **Equipo** | Enlace | `pages/equipo.html` | Porteros, Defensas, Medios, Delanteros y Cuerpo técnico |
+| 4 | **Partidos** | Enlace | `pages/partidos.html` | 4–5 partidos recientes (matchdays o tablas de resultados) |
+| 5 | **Nuestra piel** | Enlace | `pages/nuestra-piel.html` | Tienda: 3 equipaciones, merchandising y detalle de producto |
+| 6 | **Actualidad** | Enlace | `pages/actualidad.html` | Noticias con fotos y texto completo |
+| 7 | **Hazte socio** | Botón destacado (lima) | `pages/hazte-socio.html` | 3 cuotas con precios y beneficios (página estática) |
 
-El desplegable de «Club» se implementa con CSS puro (`:hover` y `:focus-within`), sin JavaScript.
-
-`Contacto` y `Aviso legal` se enlazan desde el **pie de página** de todas las páginas.
+> `Contacto` y `Aviso legal` se enlazan principalmente desde el **pie de página** (`<footer>`) de todo el sitio web.
 
 ---
 
-## Estructura actual de carpetas
+## Estructura del proyecto
 
 ```text
 byte-city-fc/
 ├── README.md
-├── index.html                 <-- Portada en la raíz del proyecto
+├── index.html                 <-- Portada principal en la raíz
 ├── css/
-│   └── base.css               <-- Paleta, tipografías y reset
-├── pages/                     <-- Páginas interiores
-│   ├── club.html
-│   ├── equipo.html
-│   ├── partidos.html
-│   ├── nuestra-piel.html
-│   ├── actualidad.html
-│   ├── hazte-socio.html
-│   ├── contacto.html
-│   └── legal.html
+│   └── base.css               <-- Paleta, tipografías y estilos base
+├── pages/                     <-- Páginas interiores del sitio
+│   ├── club.html              <-- Historia, estadio y afición (peñas y contador)
+│   ├── equipo.html            <-- Jugadores por posición + cuerpo técnico
+│   ├── partidos.html          <-- 4-5 partidos recientes en matchdays/tablas
+│   ├── nuestra-piel.html      <-- Tienda: equipaciones y merchandising
+│   ├── actualidad.html        <-- Noticias con fotos y texto
+│   ├── hazte-socio.html       <-- Página estática con 3 cuotas y beneficios
+│   ├── contacto.html          <-- Teléfono, email, RRSS y disclaimer
+│   └── legal.html             <-- Aviso legal
 ├── docs/
 │   ├── 01-planificacion.md ... 08-referencias-de-diseno.md
 │   ├── mockups/
@@ -68,55 +77,15 @@ byte-city-fc/
     ├── aficion/
     ├── codeunitedfc/
     ├── equipaciones/
+    │   ├── Primera equipacion/
+    │   ├── Segunda equipacion/
+    │   └── Tercera equipacion/
     ├── escudo/
     ├── estadio/
     ├── jugadores/
     ├── logo/
     ├── noticias/
     └── ropa/
-```
-
-`img/codeunitedfc/` contiene el escudo del rival mostrado en el próximo partido. Los directorios de recursos sin imágenes conservan un archivo `.gitkeep`. Aún no hay una carpeta `css/` ni páginas HTML adicionales.
-
-## Estructura prevista
-
-La siguiente estructura es una propuesta para las siguientes fases. Las páginas y hojas CSS enumeradas aún no están creadas.
-
-```
-byte-city-fc/
-├── index.html
-├── club.html
-├── equipo.html
-├── jugador.html
-├── partidos.html
-├── partido.html
-├── clasificacion.html
-├── nuestra-piel.html
-├── actualidad.html
-├── noticia.html
-├── hazte-socio.html
-├── gracias.html
-├── contacto.html
-├── legal.html
-├── css/
-│   ├── reset.css
-│   ├── base.css          ← colores, tipografías
-│   ├── layout.css        ← Flexbox / Grid
-│   └── responsive.css    ← @media (Mobile First)
-├── img/
-│   ├── logo/
-│   ├── jugadores/
-│   ├── equipaciones/
-│   ├── estadio/
-│   ├── noticias/
-│   ├── aficion/
-│   └── iconos/
-├── docs/
-│   ├── 01-planificacion.md
-│   ├── ...
-│   ├── mockups/          ← móvil y escritorio
-│   └── validacion/       ← capturas del validador W3C
-└── README.md
 ```
 
 ---

@@ -2,7 +2,7 @@
 
 ## Estado actual
 
-La página existente es [`../html/index.html`](../html/index.html). Declara `lang="es"` y las imágenes de los escudos tienen texto alternativo descriptivo. La portada tiene encabezados hasta `h4`, enlaces de navegación y estructura semántica básica. No se han aportado resultados de validadores ni capturas, por lo que la validación formal sigue pendiente.
+La página existente es [`../index.html`](../index.html). Declara `lang="es"` y las imágenes de los escudos tienen texto alternativo descriptivo. La portada tiene encabezados hasta `h4`, enlaces de navegación y estructura semántica básica. No se han aportado resultados de validadores ni capturas, por lo que la validación formal sigue pendiente.
 
 **Accesibilidad**
 - [ ] Declarar el idioma correcto (`<html lang="es">`) en las páginas en español.

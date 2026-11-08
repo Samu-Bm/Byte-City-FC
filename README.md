@@ -12,15 +12,13 @@ Proyecto educativo de un club de fútbol ficticio. El sitio ya cuenta con una po
 
 ## Estado actual
 
-La implementación está en desarrollo:
+La implementación se encuentra en desarrollo activo:
 
-- La única página implementada es [`html/index.html`](html/index.html). Incluye encabezado y navegación, portada con lema y enlaces, próximo partido, historia, información del estadio y pie de página.
-- La navegación ya apunta a las páginas previstas, pero esas páginas todavía no existen; por tanto, esos enlaces aún no conducen a contenido implementado.
-- Los recursos gráficos disponibles están en [`img/`](img/): escudo de Byte City FC, escudo de Code United FC, tres equipaciones y artículos de ropa.
-- La planificación y las propuestas de diseño están en [`docs/`](docs/).
-- Todavía no existen hojas CSS, formularios funcionales ni comportamiento JavaScript. La portada no enlaza ninguna hoja de estilos.
-
-Las páginas y funcionalidades detalladas en la documentación que no aparecen en la portada son objetivos de diseño, no características implementadas.
+- **Portada principal:** [`index.html`](index.html), ubicada en la raíz del proyecto. Incluye encabezado con escudo, navegación principal, sección hero con lema oficial, tarjeta del próximo partido, resumen de historia y estadio, y pie de página institucional.
+- **Páginas interiores:** planificadas y organizadas dentro de [`pages/`](pages/) para las distintas secciones del club (Club, Equipo, Partidos, Nuestra piel / Tienda, Actualidad, Hazte socio, Contacto y Legal).
+- **Estilos:** se ha creado [`css/base.css`](css/base.css) estableciendo las variables de color corporativo, tipografías y reset de base.
+- **Recursos gráficos:** organizados en [`img/`](img/): escudos del club y rivales, fotografías de las tres equipaciones oficiales, artículos de merchandising/ropa y banco de imágenes para noticias.
+- **Documentación técnica:** especificaciones completas en [`docs/`](docs/).
 
 ## Estructura del proyecto
 
@@ -71,7 +69,7 @@ Los directorios vacíos se conservan con `.gitkeep`.
 
 ## Identidad visual propuesta
 
-La guía propone verde lima (`#B6FF00`), negro (`#080F0E`), gris oscuro (`#252B2A`) y blanco roto (`#F5F7F5`), con Barlow Condensed e Inter. Estos estilos aún no están aplicados en una hoja CSS.
+La guía propone verde lima (`#B6FF00`), negro (`#080F0E`), gris oscuro (`#252B2A`) y blanco roto (`#F5F7F5`), con Barlow Condensed e Inter. Estos estilos se encuentran definidos como variables y reset en `css/base.css`.
 
 ## Próximos pasos
 

@@ -2,7 +2,7 @@
 
 # ⚽ BYTE CITY FC
 
-### *Fútbol con código en las venas.*
+### *PLAY - CODE - WIN*
 
 Proyecto educativo de un club de fútbol ficticio. El sitio ya cuenta con una portada HTML semántica y recursos gráficos; el resto de páginas y los estilos siguen en desarrollo.
 

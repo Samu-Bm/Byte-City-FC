@@ -71,17 +71,4 @@ Los directorios vacíos se conservan con `.gitkeep`.
 
 La identidad visual implementa un contraste editorial entre **Brier Bold 700** (Didone serif de acento local) y **Mona Sans** (fuente principal desde Google Fonts), junto a la paleta oficial (`#080F0E` negro, `#B6FF00` verde lima neón, `#F5F7F5` blanco roto) y referencias editoriales crema/bosque. Todo el sistema está documentado al detalle en la [Guía de estilo](docs/03-guia-de-estilo.md).
 
-## Próximos pasos
-
-1. Implementar las páginas previstas y comprobar los enlaces del menú.
-2. Crear los estilos y adaptar el sitio a móvil y escritorio.
-3. Revisar accesibilidad, enlaces y validación HTML/CSS; guardar evidencias en `docs/validacion/`.
-4. Completar los mockups en `docs/mockups/`.
-
----
-
-<div align="center">
-
-*Club ficticio creado con fines educativos.*
-
 </div>

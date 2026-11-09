@@ -10,7 +10,7 @@
 | ![](https://placehold.co/60x24/080F0E/080F0E.png) | Negro | `#080F0E` | Fondo principal |
 | ![](https://placehold.co/60x24/252B2A/252B2A.png) | Gris oscuro | `#252B2A` | Tarjetas, superficies, cabecera, pie |
 | ![](https://placehold.co/60x24/F5F7F5/F5F7F5.png) | Blanco roto | `#F5F7F5` | Textos y elementos claros |
-<br>
+
 ```css
 :root {
   --lima:   #B6FF00;

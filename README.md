@@ -60,16 +60,16 @@ Los directorios vacíos se conservan con `.gitkeep`.
 |---|---|
 | [Planificación](docs/01-planificacion.md) | Fases de trabajo y estado |
 | [Estructura del sitio](docs/02-estructura-del-sitio.md) | Sitemap previsto y estructura actual de carpetas |
-| [Guía de estilo](docs/03-guia-de-estilo.md) | Identidad visual y recursos gráficos |
+| [Guía de estilo](docs/03-guia-de-estilo.md) | Sistema de diseño, identidad visual, tipografía y recursos gráficos |
 | [Páginas y contenidos](docs/04-paginas.md) | Propuesta de páginas, todavía no implementadas |
 | [Formularios](docs/05-formularios.md) | Especificación de formularios, todavía no implementados |
 | [Accesibilidad y validación](docs/06-accesibilidad-y-validacion.md) | Criterios pendientes de aplicar y comprobar |
 | [Requisitos](docs/07-requisitos.md) | Seguimiento del alcance frente a lo que existe |
 | [Referencias de diseño](docs/08-referencias-de-diseno.md) | Referencia visual y adaptaciones propuestas |
 
-## Identidad visual propuesta
+## Identidad visual y tipografía
 
-La guía propone verde lima (`#B6FF00`), negro (`#080F0E`), gris oscuro (`#252B2A`) y blanco roto (`#F5F7F5`), con Barlow Condensed e Inter. Estos estilos se encuentran definidos como variables y reset en `css/base.css`.
+La identidad visual implementa un contraste editorial entre **Brier Bold 700** (Didone serif de acento local) y **Mona Sans** (fuente principal desde Google Fonts), junto a la paleta oficial (`#080F0E` negro, `#B6FF00` verde lima neón, `#F5F7F5` blanco roto) y referencias editoriales crema/bosque. Todo el sistema está documentado al detalle en la [Guía de estilo](docs/03-guia-de-estilo.md).
 
 ## Próximos pasos
 

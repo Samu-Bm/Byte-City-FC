@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=DM+Serif+Display&display=swap");
+
+html {
+    font-family: var(--fuente-texto);
+}
+
+body {
+    margin: 0;
+    background-color: #080F0E;
+    background-image: url("img/fondo web.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+:root {
+    --navbar-fondo: #080F0E;
+    --navbar-lima: #B6FF00;
+    --navbar-blanco: #F5F7F5;
+    --fuente-texto: "Manrope", "Trebuchet MS", sans-serif;
+    --fuente-titulos: "DM Serif Display", Georgia, serif;
+}
+
+#menuNavegacion {
+    position: relative;
+    z-index: 100;
+    width: 100%;
+    color: var(--navbar-blanco);
+}
+
+.navbar-anuncio {
+    min-height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 16px;
+    box-sizing: border-box;
+    background: var(--navbar-lima);
+    color: var(--navbar-fondo);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.navbar-principal {
+    min-height: 86px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 clamp(18px, 3vw, 48px);
+    box-sizing: border-box;
+    background: rgba(8, 15, 14, 0.97);
+}
+
+.navbar-izquierda {
+    display: flex;
+    align-items: center;
+    gap: clamp(18px, 2vw, 36px);
+}
+
+.navbar-lista,
+.navbar-utilidades {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.navbar-lista {
+    gap: clamp(12px, 2vw, 30px);
+}
+
+.navbar-utilidades {
+    gap: clamp(10px, 1.5vw, 24px);
+}
+
+.navbar-lista a,
+.navbar-utilidades a {
+    color: var(--navbar-lima);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.navbar-lista a:hover,
+.navbar-lista a[aria-current="page"],
+.navbar-utilidades a:hover {
+    color: var(--navbar-blanco);
+}
+
+.navbar-escudo {
+    width: 68px;
+    height: 68px;
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+}
+
+.navbar-escudo img {
+    width: 58px;
+    height: 58px;
+    object-fit: contain;
+}
+
+.navbar-socio {
+    border: 1px solid var(--navbar-lima);
+    padding: 9px 12px;
+    margin-left: 24px;
+    flex-shrink: 0;
+}
+
+.navbar-icono {
+    color: var(--navbar-lima);
+    text-decoration: none;
+    font-size: 19px;
+}
+
+@media (max-width: 900px) {
+    .navbar-principal {
+        min-height: 76px;
+        padding: 0 12px;
+    }
+
+    .navbar-izquierda {
+        min-width: 0;
+        gap: 12px;
+    }
+
+    .navbar-escudo {
+        width: 64px;
+        flex-shrink: 0;
+    }
+
+    .navbar-lista {
+        gap: 14px;
+        overflow-x: auto;
+        white-space: nowrap;
+        scrollbar-width: none;
+    }
+
+    .navbar-lista li {
+        flex-shrink: 0;
+    }
+
+    .navbar-socio {
+        margin-left: 12px;
+    }
+}
+
+@media (max-width: 520px) {
+    .navbar-anuncio {
+        min-height: 26px;
+        font-size: 9px;
+    }
+
+    .navbar-lista li:nth-child(n+5) {
+        display: none;
+    }
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--fuente-titulos);
+    letter-spacing: 0;
+}
+
+.navbar-anuncio,
+.navbar-lista,
+.navbar-utilidades,
+.navbar-socio,
+.navbar-icono {
+    font-family: var(--fuente-texto);
+}
